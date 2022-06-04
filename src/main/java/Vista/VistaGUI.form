@@ -1,0 +1,2464 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JFrame" name="registrarClientes">
+      <Properties>
+        <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[0, 0]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="etiquetaMes" min="-2" max="-2" attributes="0"/>
+                                      <Component id="comboBoxMeses" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="etiquetaAnios" min="-2" max="-2" attributes="0"/>
+                                      <Component id="comboBoxAnios" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="etiquetaPrimerApellido" min="-2" max="-2" attributes="0"/>
+                                      <Component id="etiquetaSegundoApellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoPrimerApellido" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="textoSegundoApellido" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoNombre" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="etiquetaIdentificacion" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoIdentificacion" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNumeroTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoNumeroTelefono" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="etiquetaCorreoElectronico" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoCorreoElectronico" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="tituloRegistrarClientes" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="86" pref="234" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="etiquetaDia" min="-2" max="-2" attributes="0"/>
+                              <Component id="comboBoxDias" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="etiquetaFechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                          <Component id="registrarClienteBoton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tituloRegistrarClientes" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPrimerApellido" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Component id="textoPrimerApellido" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaSegundoApellido" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoSegundoApellido" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaNombre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNombre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaIdentificacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoIdentificacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroTelefono" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNumeroTelefono" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaCorreoElectronico" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoCorreoElectronico" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaFechaNacimiento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="etiquetaDia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaMes" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaAnios" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="comboBoxDias" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboBoxMeses" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="comboBoxAnios" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="registrarClienteBoton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="24" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloRegistrarClientes">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registrar Clientes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPrimerApellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Primer apellido"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoSegundoApellido">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaSegundoApellido">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Segundo apellido"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPrimerApellido">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNombre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNombre">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaIdentificacion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identificacion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoIdentificacion">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoIdentificacionKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroTelefono">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xfa;mero Tel&#xe9;fono"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNumeroTelefono">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNumeroTelefonoKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaCorreoElectronico">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Correo Electr&#xf3;nico"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoCorreoElectronico">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaFechaNacimiento">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaDia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dia"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxDias">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="31">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+                <StringItem index="4" value="5"/>
+                <StringItem index="5" value="6"/>
+                <StringItem index="6" value="7"/>
+                <StringItem index="7" value="8"/>
+                <StringItem index="8" value="9"/>
+                <StringItem index="9" value="10"/>
+                <StringItem index="10" value="11"/>
+                <StringItem index="11" value="12"/>
+                <StringItem index="12" value="13"/>
+                <StringItem index="13" value="14"/>
+                <StringItem index="14" value="15"/>
+                <StringItem index="15" value="16"/>
+                <StringItem index="16" value="17"/>
+                <StringItem index="17" value="18"/>
+                <StringItem index="18" value="19"/>
+                <StringItem index="19" value="20"/>
+                <StringItem index="20" value="21"/>
+                <StringItem index="21" value="22"/>
+                <StringItem index="22" value="23"/>
+                <StringItem index="23" value="24"/>
+                <StringItem index="24" value="25"/>
+                <StringItem index="25" value="26"/>
+                <StringItem index="26" value="27"/>
+                <StringItem index="27" value="28"/>
+                <StringItem index="28" value="29"/>
+                <StringItem index="29" value="30"/>
+                <StringItem index="30" value="31"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxDiasActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaMes">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxMeses">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="12">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+                <StringItem index="4" value="5"/>
+                <StringItem index="5" value="6"/>
+                <StringItem index="6" value="7"/>
+                <StringItem index="7" value="8"/>
+                <StringItem index="8" value="9"/>
+                <StringItem index="9" value="10"/>
+                <StringItem index="10" value="11"/>
+                <StringItem index="11" value="12"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaAnios">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="A&#xf1;o"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxAnios">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="103">
+                <StringItem index="0" value="2022"/>
+                <StringItem index="1" value="2021"/>
+                <StringItem index="2" value="2020"/>
+                <StringItem index="3" value="2019"/>
+                <StringItem index="4" value="2018"/>
+                <StringItem index="5" value="2017"/>
+                <StringItem index="6" value="2016"/>
+                <StringItem index="7" value="2015"/>
+                <StringItem index="8" value="2014"/>
+                <StringItem index="9" value="2013"/>
+                <StringItem index="10" value="2012"/>
+                <StringItem index="11" value="2011"/>
+                <StringItem index="12" value="2010"/>
+                <StringItem index="13" value="2009"/>
+                <StringItem index="14" value="2008"/>
+                <StringItem index="15" value="2007"/>
+                <StringItem index="16" value="2006"/>
+                <StringItem index="17" value="2005"/>
+                <StringItem index="18" value="2004"/>
+                <StringItem index="19" value="2003"/>
+                <StringItem index="20" value="2002"/>
+                <StringItem index="21" value="2001"/>
+                <StringItem index="22" value="2000"/>
+                <StringItem index="23" value="1999"/>
+                <StringItem index="24" value="1998"/>
+                <StringItem index="25" value="1997"/>
+                <StringItem index="26" value="1996"/>
+                <StringItem index="27" value="1995"/>
+                <StringItem index="28" value="1994"/>
+                <StringItem index="29" value="1993"/>
+                <StringItem index="30" value="1992"/>
+                <StringItem index="31" value="1991"/>
+                <StringItem index="32" value="1990"/>
+                <StringItem index="33" value="1989"/>
+                <StringItem index="34" value="1988"/>
+                <StringItem index="35" value="1987"/>
+                <StringItem index="36" value="1986"/>
+                <StringItem index="37" value="1985"/>
+                <StringItem index="38" value="1984"/>
+                <StringItem index="39" value="1983"/>
+                <StringItem index="40" value="1982"/>
+                <StringItem index="41" value="1981"/>
+                <StringItem index="42" value="1980"/>
+                <StringItem index="43" value="1979"/>
+                <StringItem index="44" value="1978"/>
+                <StringItem index="45" value="1977"/>
+                <StringItem index="46" value="1976"/>
+                <StringItem index="47" value="1975"/>
+                <StringItem index="48" value="1974"/>
+                <StringItem index="49" value="1973"/>
+                <StringItem index="50" value="1972"/>
+                <StringItem index="51" value="1971"/>
+                <StringItem index="52" value="1970"/>
+                <StringItem index="53" value="1969"/>
+                <StringItem index="54" value="1968"/>
+                <StringItem index="55" value="1967"/>
+                <StringItem index="56" value="1966"/>
+                <StringItem index="57" value="1965"/>
+                <StringItem index="58" value="1964"/>
+                <StringItem index="59" value="1963"/>
+                <StringItem index="60" value="1962"/>
+                <StringItem index="61" value="1961"/>
+                <StringItem index="62" value="1960"/>
+                <StringItem index="63" value="1959"/>
+                <StringItem index="64" value="1958"/>
+                <StringItem index="65" value="1957"/>
+                <StringItem index="66" value="1956"/>
+                <StringItem index="67" value="1955"/>
+                <StringItem index="68" value="1954"/>
+                <StringItem index="69" value="1953"/>
+                <StringItem index="70" value="1952"/>
+                <StringItem index="71" value="1951"/>
+                <StringItem index="72" value="1950"/>
+                <StringItem index="73" value="1949"/>
+                <StringItem index="74" value="1948"/>
+                <StringItem index="75" value="1947"/>
+                <StringItem index="76" value="1946"/>
+                <StringItem index="77" value="1945"/>
+                <StringItem index="78" value="1944"/>
+                <StringItem index="79" value="1943"/>
+                <StringItem index="80" value="1942"/>
+                <StringItem index="81" value="1941"/>
+                <StringItem index="82" value="1940"/>
+                <StringItem index="83" value="1939"/>
+                <StringItem index="84" value="1938"/>
+                <StringItem index="85" value="1937"/>
+                <StringItem index="86" value="1936"/>
+                <StringItem index="87" value="1935"/>
+                <StringItem index="88" value="1934"/>
+                <StringItem index="89" value="1933"/>
+                <StringItem index="90" value="1932"/>
+                <StringItem index="91" value="1931"/>
+                <StringItem index="92" value="1930"/>
+                <StringItem index="93" value="1929"/>
+                <StringItem index="94" value="1928"/>
+                <StringItem index="95" value="1927"/>
+                <StringItem index="96" value="1926"/>
+                <StringItem index="97" value="1925"/>
+                <StringItem index="98" value="1924"/>
+                <StringItem index="99" value="1923"/>
+                <StringItem index="100" value="1922"/>
+                <StringItem index="101" value="1921"/>
+                <StringItem index="102" value="1920"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxAniosActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="registrarClienteBoton">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Registrar Cliente"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registrarClienteBotonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Limpiar Campos"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="crearCuenta">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="textoPin" max="32767" attributes="0"/>
+                      <Component id="crearCuentaEtiqueta" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaIdentificacionCliente" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoIdentificacionCrearCuenta" alignment="0" pref="200" max="32767" attributes="0"/>
+                      <Component id="etiquetaNumeroTelefono1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoSaldoInicial" alignment="0" pref="200" max="32767" attributes="0"/>
+                      <Component id="etiquetaPinCliente" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <Component id="registrarCuenta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="crearCuentaEtiqueta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaIdentificacionCliente" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoIdentificacionCrearCuenta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroTelefono1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoSaldoInicial" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinCliente" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPin" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="registrarCuenta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="36" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="crearCuentaEtiqueta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Crear cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoSaldoInicial">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoSaldoInicialKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaIdentificacionCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identificacion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoIdentificacionCrearCuenta">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoIdentificacionCrearCuentaKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroTelefono1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Saldo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPin">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="registrarCuenta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registrar Cuenta"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registrarCuentaActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="listarClientesAscendentes">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="separadorMenu1" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="tituloInformacionSoloCliente" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="identificacionClienteBuscar" min="-2" pref="150" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="botonBuscarCliente" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane1" min="-2" pref="600" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tituloClientesAscendentes1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tituloClientesAscendentes1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu1" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="242" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="tituloInformacionSoloCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="identificacionClienteBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonBuscarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloInformacionSoloCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mostrar informaci&#xf3;n espec&#xed;fica de un cliente por identificacion:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu1">
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="listaClientesAscendente">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="tituloClientesAscendentes1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Clientes listados por apellido ascendente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="identificacionClienteBuscar">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="identificacionClienteBuscarKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonBuscarCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonBuscarClienteActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="listarCuentasDescendentes">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="tituloInformacionSoloCuenta" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="numeroCuentaBuscarCuenta" min="-2" pref="150" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="botonBuscarCuenta" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="626" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="31" max="32767" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="tituloCuentasDescendentes" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="431" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="separadorMenu2" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="243" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="botonBuscarCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="numeroCuentaBuscarCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tituloInformacionSoloCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="tituloCuentasDescendentes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="separadorMenu2" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace pref="344" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloCuentasDescendentes">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cuentas descendentes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaBuscarCuenta">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroCuentaBuscarCuentaActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaBuscarCuentaKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="tituloInformacionSoloCuenta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mostrar informaci&#xf3;n espec&#xed;fica de una cuenta por numero de cuenta:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu2">
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="listarCuentasDescendentesTexto">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="botonBuscarCuenta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonBuscarCuentaActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="depositoColones">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="separadorMenu3" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="tituloDepositoColones" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textoMontoDepositar" min="-2" pref="255" max="-2" attributes="0"/>
+                              <Component id="etiquetaNumeroCuenta1" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaMontoDeposito" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoNumeroCuentaDeposito" min="-2" pref="255" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                  <Component id="botonDepositar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tituloDepositoColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu3" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuenta1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNumeroCuentaDeposito" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaMontoDeposito" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoMontoDepositar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="botonDepositar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloDepositoColones">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Dep&#xf3;sito en colones"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu3">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaMontoDeposito">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monto a depositar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNumeroCuentaDeposito">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNumeroCuentaDepositoKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuenta1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xfa;mero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoMontoDepositar">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoMontoDepositarKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonDepositar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Depositar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonDepositarActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="depositoDolares">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="separadorMenu4" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="tituloDepositoDolares" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="textoMontoDepositarDolares" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                              <Component id="etiquetaNumeroCuentaDepositoDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaMontoDepositoDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="textoNumeroCuentaDepositoDolares" alignment="0" min="-2" pref="255" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                  <Component id="botonDepositarDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="tituloDepositoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu4" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaDepositoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNumeroCuentaDepositoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaMontoDepositoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoMontoDepositarDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="botonDepositarDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloDepositoDolares">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Dep&#xf3;sito en d&#xf3;lares"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu4">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaMontoDepositoDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monto a depositar en d&#xf3;lares"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNumeroCuentaDepositoDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNumeroCuentaDepositoDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaDepositoDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="N&#xfa;mero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoMontoDepositarDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoMontoDepositarDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonDepositarDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Depositar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonDepositarDolaresActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarSaldoEnColones">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="separadorMenu5" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="tituloConsultarSaldoColones" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="numeroCuentaConsultaColones" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNumeroCuentaConsultarColones" min="-2" max="-2" attributes="0"/>
+                                      <Component id="etiquetaPinActualConsultarColones" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoPinActualColones" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonConsultarSaldoColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarSaldoColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu5" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaConsultarColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaConsultaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinActualConsultarColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPinActualColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="botonConsultarSaldoColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarSaldoColones">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar saldo en colones"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu5">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaConsultarColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaConsultaColones">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaConsultaColonesKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinActualConsultarColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPinActualColones">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinActualColonesKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonConsultarSaldoColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar saldo en colones"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarSaldoColonesActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="cambiarPin">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="tituloCambiarPin1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="etiquetaNumeroCuentaCambiarPin1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="numeroCuentaCambiarPin" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="etiquetaPinActual1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoPinActual" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="etiquetaNuevoPin1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNuevoPin" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="separadorMenu6" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                  <Component id="botonCambiaPin" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloCambiarPin1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu6" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaCambiarPin1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaCambiarPin" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinActual1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPinActual" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaNuevoPin1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNuevoPin" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="botonCambiaPin" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloCambiarPin1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cambiar Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu6">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaCambiarPin1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaCambiarPin">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaCambiarPinKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinActual1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin actual"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPinActual">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinActualKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNuevoPin1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nuevo pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNuevoPin">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNuevoPinKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonCambiaPin">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cambiar Pin"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCambiaPinActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarSaldoDolares">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="separadorMenu7" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="tituloConsultarSaldoDolares" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="numeroCuentaConsultaDolares" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNumeroCuentaConsultarSaldoDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="etiquetaPinActualDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textoPinActualDolares" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonConsultarSaldoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarSaldoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu7" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaConsultarSaldoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaConsultaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinActualDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPinActualDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="botonConsultarSaldoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarSaldoDolares">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar saldo en dolares"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu7">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaConsultarSaldoDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaConsultaDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaConsultaDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinActualDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPinActualDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinActualDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonConsultarSaldoDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar saldo en dolares"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarSaldoDolaresActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarEstadoCuentaColones">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="numeroCuentaEstadoCuentaColones" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNumeroCuentaEstadoCuenta" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="etiquetaPinActualEstadoCuentaColones" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="numeroPinEstadoCuentaColones" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="tituloConsultarEstadoCuenta" alignment="0" min="-2" pref="425" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="separadorMenu8" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonConsultarEstadoCuentaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarEstadoCuenta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu8" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaEstadoCuenta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaEstadoCuentaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinActualEstadoCuentaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroPinEstadoCuentaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="botonConsultarEstadoCuentaColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarEstadoCuenta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar estado de cuenta en colones"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu8">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaEstadoCuenta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaEstadoCuentaColones">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroCuentaEstadoCuentaColonesActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaEstadoCuentaColonesKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinActualEstadoCuentaColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroPinEstadoCuentaColones">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroPinEstadoCuentaColonesKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonConsultarEstadoCuentaColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar estado de cuenta en colones"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarEstadoCuentaColonesActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarEstadoCuentaDolares">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="numeroCuentaEstadoCuentaDolares" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                      <Component id="etiquetaNumeroCuentaEstadoCuentaDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="etiquetaPinActualEstadoCuentaDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="numeroPinEstadoCuentaDolares" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="tituloConsultarEstadoCuentaDolares" alignment="0" min="-2" pref="425" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="77" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="separadorMenu9" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonCuentaEstadoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarEstadoCuentaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu9" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaEstadoCuentaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaEstadoCuentaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinActualEstadoCuentaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroPinEstadoCuentaDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="botonCuentaEstadoDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarEstadoCuentaDolares">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar estado de cuenta en d&#xf3;lares"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu9">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaEstadoCuentaDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaEstadoCuentaDolares">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroCuentaEstadoCuentaDolaresActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaEstadoCuentaDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinActualEstadoCuentaDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroPinEstadoCuentaDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroPinEstadoCuentaDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonCuentaEstadoDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar estado de cuenta en dolares"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCuentaEstadoDolaresActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarEstatusCuenta">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="separadorMenu10" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="numeroCuentaEstatus" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="etiquetaNumeroCuentaEstatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="118" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="tituloConsultarEstatus" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonConsultarEstatus" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarEstatus" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu10" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaEstatus" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaEstatus" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="botonConsultarEstatus" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarEstatus">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar estatus de la cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu10">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaEstatus">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaEstatus">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroCuentaEstatusActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaEstatusKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonConsultarEstatus">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar Estatus"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarEstatusActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="consultarGananciasBancoCuenta">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="numeroCuentaGanancia" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="etiquetaNumeroCuentaGanancia" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="separadorMenu11" max="32767" attributes="0"/>
+                              <Component id="tituloConsultarGanancias" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="botonConsultarGanancia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="tituloConsultarGanancias" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="separadorMenu11" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaGanancia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaGanancia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="botonConsultarGanancia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="tituloConsultarGanancias">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consultar ganancias del banco por cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="separadorMenu11">
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaGanancia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaGanancia">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numeroCuentaGananciaActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaGananciaKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonConsultarGanancia">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consultar ganancias"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarGananciaActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="retiroColones">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="etiquetaNumeroCuentaRetiro" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaPinColones" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaPalabraColones" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textoPinColonesRetiro" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="textoPalabraColones" max="32767" attributes="0"/>
+                                  <Component id="etiquetaSaldoRetiroColones" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textoSaldoRetiro" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="botonRealizarRetiroColones" max="32767" attributes="0"/>
+                              <Component id="botonGenerarPalabraRetiro" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="retiroColonesEtiqueta" min="-2" max="-2" attributes="0"/>
+                      <Component id="textoNumeroCuentaRetiro" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="retiroColonesEtiqueta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaRetiro" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNumeroCuentaRetiro" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPinColonesRetiro" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPalabraColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoPalabraColones" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonGenerarPalabraRetiro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaSaldoRetiroColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoSaldoRetiro" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="botonRealizarRetiroColones" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaRetiro">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNumeroCuentaRetiro">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNumeroCuentaRetiroKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaSaldoRetiroColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cantidad a retirar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPinColonesRetiro">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinColonesRetiroKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonRealizarRetiroColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Realizar retiro"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRealizarRetiroColonesActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="retiroColonesEtiqueta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Realizar retiro en colones"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoSaldoRetiro">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoSaldoRetiroKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPalabraColones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Palabra"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPalabraColones">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPalabraColonesKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+        </Component>
+        <Component class="javax.swing.JButton" name="botonGenerarPalabraRetiro">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Generar Palabra"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonGenerarPalabraRetiroActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="retiroDolares">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="retiroColonesEtiqueta1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="43" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="etiquetaNumeroCuentaRetiroDolar" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaPinColonesDolar" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaPalabraDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="textoNumeroCuentaRetiroDolar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="textoPinColonesRetiroDolar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="textoPalabraDolares" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="etiquetaSaldoRetiroColones1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textoSaldoRetiroDolares" alignment="1" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="botonGenerarPalabraRetiroDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="botonRealizarRetiroDolares" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="retiroColonesEtiqueta1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaRetiroDolar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoNumeroCuentaRetiroDolar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinColonesDolar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoPinColonesRetiroDolar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaPalabraDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textoPalabraDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonGenerarPalabraRetiroDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="etiquetaSaldoRetiroColones1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="textoSaldoRetiroDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="botonRealizarRetiroDolares" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaRetiroDolar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoNumeroCuentaRetiroDolar">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoNumeroCuentaRetiroDolarKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaSaldoRetiroColones1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cantidad a retirar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPinColonesRetiroDolar">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPinColonesRetiroDolarKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="botonRealizarRetiroDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Realizar retiro"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRealizarRetiroDolaresActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="retiroColonesEtiqueta1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Realizar retiro en d&#xf3;lares"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoSaldoRetiroDolares">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoSaldoRetiroDolaresActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoSaldoRetiroDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinColonesDolar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPalabraDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Palabra"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textoPalabraDolares">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPalabraDolaresKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator2">
+        </Component>
+        <Component class="javax.swing.JButton" name="botonGenerarPalabraRetiroDolares">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Generar Palabra"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonGenerarPalabraRetiroDolaresActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JFrame" name="transferenciaLocal">
+      <Properties>
+        <Property name="resizable" type="boolean" value="false"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jSeparator3" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="transferenciaEtiqueta" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaNumeroCuentaOrigen" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numeroCuentaOrigen" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="etiquetaPinOrigen" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="pinOrigen" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="etiquetaCuentaDestino" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="numeroCuentaDestino" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="etiquetaSaldo" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="saldoTransferencia" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="etiquetaPalabra" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="palabraTransferencia" min="-2" pref="220" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="palabraTransferenciaBoton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="realizarTransferenciaBoton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="transferenciaEtiqueta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="etiquetaNumeroCuentaOrigen" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaOrigen" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaPinOrigen" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pinOrigen" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaCuentaDestino" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="numeroCuentaDestino" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaSaldo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="saldoTransferencia" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="etiquetaPalabra" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="palabraTransferencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="palabraTransferenciaBoton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="realizarTransferenciaBoton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="jSeparator3">
+        </Component>
+        <Component class="javax.swing.JLabel" name="transferenciaEtiqueta">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Realizar transferencia local"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaNumeroCuentaOrigen">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta del origen"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaOrigen">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaOrigenKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPinOrigen">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pin del origen"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="pinOrigen">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="pinOrigenKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaCuentaDestino">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de cuenta del destino"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="numeroCuentaDestino">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="numeroCuentaDestinoKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaSaldo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Saldo a transferir"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="saldoTransferencia">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="saldoTransferenciaKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="etiquetaPalabra">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Palabra"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="palabraTransferencia">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="palabraTransferenciaKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="palabraTransferenciaBoton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Generar palabra"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="palabraTransferenciaBotonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="realizarTransferenciaBoton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Realizar transferencia"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="realizarTransferenciaBotonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Default Cursor"/>
+    </Property>
+    <Property name="name" type="java.lang.String" value="MenuPrincipal" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="separadorMenu" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="botonRealizarTransferencia" max="32767" attributes="0"/>
+                  <Component id="botonEstatusCuenta" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="victorMenu" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="valeMenu" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="carlosMenu" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botonCambiarPin" min="-2" pref="522" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="botonConsultarCompraDolar" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="consultarSaldoActualColones" alignment="0" min="-2" pref="252" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="consultarSaldoActualDolares" max="32767" attributes="0"/>
+                                  <Component id="botonConsultarCuentaDolar" min="-2" pref="252" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="BotonDepositoColones" max="32767" attributes="0"/>
+                                  <Component id="botonListarClientesAscendente" max="32767" attributes="0"/>
+                                  <Component id="BotonVistaClientes" min="-2" pref="252" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="botonListarCuentasDescendentes" max="32767" attributes="0"/>
+                                  <Component id="BotonDepositoDolares" max="32767" attributes="0"/>
+                                  <Component id="BotonVistaCuentas" min="-2" pref="252" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="botonEstadoCuentaColones" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="botonConsultarEstadoCuentaDolares" min="-2" pref="252" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tituloMenu" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="subtituloMenu1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="botonRetiroColones" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="botonConsultarGananciasGenerales" alignment="0" pref="252" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="botonGananciasBancoCuenta" max="32767" attributes="0"/>
+                                  <Component id="botonRetiroDolares" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="botonSalir" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                      <Component id="subtituloMenu1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="victorMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="valeMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="carlosMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="tituloMenu" min="-2" pref="48" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="separadorMenu" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BotonVistaCuentas" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="BotonVistaClientes" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonListarClientesAscendente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonListarCuentasDescendentes" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BotonDepositoColones" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonDepositoDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonCambiarPin" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="consultarSaldoActualColones" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="consultarSaldoActualDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonConsultarCompraDolar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonConsultarCuentaDolar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonEstadoCuentaColones" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonConsultarEstadoCuentaDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonEstatusCuenta" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonConsultarGananciasGenerales" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonGananciasBancoCuenta" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonRetiroColones" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonRetiroDolares" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonRealizarTransferencia" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="botonSalir" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="tituloMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="36" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Banco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="victorMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Victor Acu&#xf1;a Coto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="separadorMenu">
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="BotonVistaClientes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrar Cliente"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonVistaClientesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="BotonVistaCuentas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Crear Cuenta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonVistaCuentasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="botonConsultarCompraDolar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar Compra D&#xf3;lar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarCompraDolarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="botonConsultarCuentaDolar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar Venta D&#xf3;lar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarCuentaDolarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonListarClientesAscendente">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Listar clientes de manera ascendente"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonListarClientesAscendenteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonListarCuentasDescendentes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Listar cuentas de manera descendente"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonListarCuentasDescendentesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="BotonDepositoColones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar deposito en colones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonDepositoColonesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="BotonDepositoDolares">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar deposito en dolares"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonDepositoDolaresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonCambiarPin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cambiar pin"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCambiarPinActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="consultarSaldoActualColones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar saldo actual en colones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarSaldoActualColonesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="consultarSaldoActualDolares">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar saldo actual en d&#xf3;lares"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarSaldoActualDolaresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="subtituloMenu1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Menu principal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="valeMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Valeria Fern&#xe1;ndez Barquero"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="carlosMenu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Carlos S&#xe1;nchez Leiva"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonEstadoCuentaColones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar Estado de Cuenta en Colones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEstadoCuentaColonesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonConsultarEstadoCuentaDolares">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar Estado de Cuenta en D&#xf3;lares"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarEstadoCuentaDolaresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonEstatusCuenta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar estatus de la cuenta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEstatusCuentaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonConsultarGananciasGenerales">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar ganancias totales del banco"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonConsultarGananciasGeneralesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonGananciasBancoCuenta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Consultar ganancias del banco por cuenta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonGananciasBancoCuentaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonRetiroColones">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar un retiro en colones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRetiroColonesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonRetiroDolares">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar un retiro en dolares"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRetiroDolaresActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonRealizarTransferencia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Realizar transferencia en colones"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRealizarTransferenciaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonSalir">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="3"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="SALIR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonSalirActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
