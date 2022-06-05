@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Creación de cuentas</title>
+    </head>
+    <body>
+        <h1>Crear una cuenta</h1>
+        <hr>
+        <h3>Ingrese los datos solicitados: </h3>
+        <nav>
+            <form method="GET" action="RegistroCuenta">
+                <hr>
+                <label for="nombre">Identificacion del cliente:</label>
+                <input type="text" placeholder="Identificación" name= "identificacionCliente" required>   
+                <br><br>
+                <label>Saldo inicial de la cuenta:</label>
+                <input type="text" placeholder="Saldo" name= "saldo" required>
+                <br><br>
+                <label>PIN:</label>
+                <input type="text" placeholder="PIN" name= "pin" required>
+                <br><br>
+                <button type="submit">Crear cuenta</button>
+                <hr>
+            </form>
+            <a href="index.html">Volver al menú principal</a>
+        </nav>
+    </body>
+</html>

@@ -8,6 +8,10 @@
         <servlet-name>IniciarWeb</servlet-name>
         <servlet-class>SolicitudesWeb.IniciarWeb</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroCuenta</servlet-name>
+        <servlet-class>SolicitudesWeb.RegistroCuenta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>IniciarWeb</servlet-name>
         <url-pattern>/IniciarWeb</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroCuenta</servlet-name>
+        <url-pattern>/RegistroCuenta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
