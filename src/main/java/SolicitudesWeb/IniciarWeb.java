@@ -48,7 +48,7 @@ public class IniciarWeb extends HttpServlet {
             out.println("<h1>Servlet IniciarWeb at " + request.getContextPath() + "</h1>");
             out.println("<h1>" + cliente.consultarDatosCliente() + "</h1>");
             out.println("</body>");
-            out.println("<a href=\"index.html\">Volver al menú principal</a>");
+            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
             out.println("</html>");
         }
     }

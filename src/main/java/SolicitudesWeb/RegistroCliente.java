@@ -53,7 +53,7 @@ public class RegistroCliente extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet RegistroCliente at " + request.getContextPath() + "</h1>");
-            out.println("<h3>" + fechaNacimiento + "</h3>");
+            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
         }

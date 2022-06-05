@@ -49,6 +49,7 @@ public class RegistroCuenta extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet RegistroCuenta at " + request.getContextPath() + "</h1>");
+            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
         }
