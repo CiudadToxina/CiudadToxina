@@ -36,9 +36,11 @@ public class IniciarWeb extends HttpServlet {
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
-        Cliente cliente = banco.buscarCliente(403560879);
+        
+        response.sendRedirect("MenuPrincipal.html");
+        
+        /*Cliente cliente = banco.buscarCliente(117450718);
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -50,6 +52,6 @@ public class IniciarWeb extends HttpServlet {
             out.println("</body>");
             out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
             out.println("</html>");
-        }
+        }*/
     }
 }
