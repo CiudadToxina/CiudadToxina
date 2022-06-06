@@ -58,7 +58,7 @@ public class RegistroCuenta extends HttpServlet {
                 + "</head>"
                 + "<body>"
                 + "<h1><br/>" + controlador.registrarCuenta(saldo, pin, duenioCuenta, IniciarWeb.banco) + "</h1>"
-                + "<a href=\"index.html\"><button>Volver al menú principal</button></a>"
+                + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
         }

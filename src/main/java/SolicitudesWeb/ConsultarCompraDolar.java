@@ -6,10 +6,15 @@ package SolicitudesWeb;
 
 import Controlador.Controlador;
 import Controlador.ControladorValidaciones;
+import Excepciones.BlankSpaceException;
 import Excepciones.CuentaDoesNotExistException;
-import static SolicitudesWeb.RegistroCliente.controladorValidaciones;
+import Excepciones.CuentaInactivaException;
+import Excepciones.PinDoesNotMatchException;
+import static SolicitudesWeb.DepositarColones.controlador;
+import static SolicitudesWeb.DepositarColones.controladorValidaciones;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author vjiucl
  */
-public class DepositarColones extends HttpServlet {
+public class ConsultarCompraDolar extends HttpServlet {
     static Controlador controlador = new Controlador();
     static ControladorValidaciones controladorValidaciones = new ControladorValidaciones();
     /**
@@ -31,37 +36,22 @@ public class DepositarColones extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int numCuenta;
-        int montoDeposito;
+        response.setContentType("text/html;charset=UTF-8");
         
-        try{
-            response.setContentType("text/html;charset=UTF-8");
-            numCuenta = Integer.parseInt(request.getParameter("numCuenta"));
-            controladorValidaciones.cuentaExiste(numCuenta, IniciarWeb.banco);
-            
-            montoDeposito = Integer.parseInt(request.getParameter("monto")); 
-            
-            PrintWriter out = response.getWriter();
-            out.println("<!DOCTYPE html>"
+        PrintWriter out = response.getWriter();
+        out.println("<!DOCTYPE html>"
                 + "<html>"
                 + "<head>"
-                + "<title>Registro completo.</title>"
+                + "<title></title>"
                 + "</head>"
                 + "<body>"
-                + "<h1><br/>" + controlador.depositarColones(numCuenta, montoDeposito, IniciarWeb.banco) + "</h1>"
+                + "<h1><br/>" + controlador.consultarCompraDolar() + "</h1>"
                 + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
-        }
-        catch (NumberFormatException entradaInvalida){
-            PrintWriter out = response.getWriter();   
-            out.println(controladorValidaciones.auxiliarWeb("Debe ingresar un número entero.", "DepositarColones"));
-        }
-        catch (CuentaDoesNotExistException cuentaNoExiste){
-            PrintWriter out = response.getWriter();   
-            out.println(controladorValidaciones.auxiliarWeb(cuentaNoExiste.getLocalizedMessage(), "DepositarColones"));
-        }   
     }
 }
+        

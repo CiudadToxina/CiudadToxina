@@ -50,7 +50,7 @@ static Controlador controlador = new Controlador();
                 + "</head>"
                 + "<body>"
                 + "<h1><br/>" + controlador.depositarDolares(numCuenta, montoDeposito, IniciarWeb.banco) + "</h1>"
-                + "<a href=\"index.html\"><button>Volver al menú principal</button></a>"
+                + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
         }

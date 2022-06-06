@@ -24,6 +24,22 @@
         <servlet-name>DepositarDolares</servlet-name>
         <servlet-class>SolicitudesWeb.DepositarDolares</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarCompraDolar</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarCompraDolar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarVentaDolar</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarVentaDolar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarSaldoColones</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarSaldoColones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CambiarPin</servlet-name>
+        <servlet-class>SolicitudesWeb.CambiarPin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -47,6 +63,22 @@
     <servlet-mapping>
         <servlet-name>DepositarDolares</servlet-name>
         <url-pattern>/DepositarDolares</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarCompraDolar</servlet-name>
+        <url-pattern>/ConsultarCompraDolar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarVentaDolar</servlet-name>
+        <url-pattern>/ConsultarVentaDolar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarSaldoColones</servlet-name>
+        <url-pattern>/ConsultarSaldoColones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CambiarPin</servlet-name>
+        <url-pattern>/CambiarPin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
