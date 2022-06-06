@@ -12,6 +12,14 @@
         <servlet-name>RegistroCuenta</servlet-name>
         <servlet-class>SolicitudesWeb.RegistroCuenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>SolicitudesWeb.RealizarDepositoColones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DepositarColones</servlet-name>
+        <servlet-class>SolicitudesWeb.DepositarColones</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>RegistroCuenta</servlet-name>
         <url-pattern>/RegistroCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DepositarColones</servlet-name>
+        <url-pattern>/DepositarColones</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
