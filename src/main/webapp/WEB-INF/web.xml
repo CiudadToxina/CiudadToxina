@@ -20,6 +20,10 @@
         <servlet-name>DepositarColones</servlet-name>
         <servlet-class>SolicitudesWeb.DepositarColones</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DepositarDolares</servlet-name>
+        <servlet-class>SolicitudesWeb.DepositarDolares</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>DepositarColones</servlet-name>
         <url-pattern>/DepositarColones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DepositarDolares</servlet-name>
+        <url-pattern>/DepositarDolares</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
