@@ -38,8 +38,6 @@ import logicadenegocios.Operacion;
  * @author valef
  */
 
-
-
 public class VistaCLI {
     static Banco banco = new Banco();
     //Estas son las declaraciones de los objetos de la entrada y salida estándar

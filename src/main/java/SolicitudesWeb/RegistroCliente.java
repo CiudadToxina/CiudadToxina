@@ -77,7 +77,7 @@ public class RegistroCliente extends HttpServlet {
                 + "</head>"
                 + "<body>"
                 + "<h1><br/>" + controlador.registrarCliente(primerApellido, segundoApellido, nombre, identificacion, numeroTelefonico, correoElectronico, pDia, pMes, pAnio, IniciarWeb.banco) + "</h1>"
-                + "<a href=\"index.html\"><button>Volver al menú principal</button></a>"
+                + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
         }
