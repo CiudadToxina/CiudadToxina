@@ -14,6 +14,12 @@ import Controlador.Controlador;
 import Controlador.ControladorValidaciones;
 import Excepciones.BlankSpaceException;
 import Excepciones.CedulaFormatException;
+import Excepciones.ClienteAlreadyExistsException;
+import Excepciones.CorreoExistsException;
+import Excepciones.DateFormatException;
+import Excepciones.MailFormatException;
+import Excepciones.NumTelFormatException;
+import Excepciones.TelefonoExistsException;
 
 /**
  *
@@ -36,65 +42,81 @@ public class RegistroCliente extends HttpServlet {
         try{
             response.setContentType("text/html;charset=UTF-8");
             String primerApellido = request.getParameter("primerApellido");
-            //controladorValidaciones.espacioEnBlanco(primerApellido);
+            controladorValidaciones.espacioEnBlanco(primerApellido);
 
             String segundoApellido = request.getParameter("segundoApellido");
+            controladorValidaciones.espacioEnBlanco(segundoApellido);
+            
             String nombre  = request.getParameter("nombre");
+            controladorValidaciones.espacioEnBlanco(nombre);
+            
             int identificacion = Integer.parseInt(request.getParameter("identificacion"));
             controladorValidaciones.validarCedula(Integer.toString(identificacion));
+            controladorValidaciones.clienteRepetido(identificacion, IniciarWeb.banco); 
             
             String fechaNacimiento = request.getParameter("fechaNacimiento");
             int pAnio = Integer.valueOf(fechaNacimiento.substring(0,4));
             int pMes = Integer.valueOf(fechaNacimiento.substring(5,7));
             int pDia = Integer.valueOf(fechaNacimiento.substring(8,10));
+            controladorValidaciones.validarFecha(pDia, pMes, pAnio);
+            
             int numeroTelefonico = Integer.parseInt(request.getParameter("numeroTelefonico"));
+            controladorValidaciones.validarNumTel(Integer.toString(numeroTelefonico));
+            controladorValidaciones.telRepetido(numeroTelefonico, IniciarWeb.banco); 
+            
             String correoElectronico = request.getParameter("correoElectronico");
+            controladorValidaciones.espacioEnBlanco(correoElectronico);
+            controladorValidaciones.validarCorreo(correoElectronico);
+            controladorValidaciones.correoRepetido(correoElectronico, IniciarWeb.banco);
 
-            controlador.registrarCliente(primerApellido, segundoApellido, nombre, identificacion, numeroTelefonico, correoElectronico, pDia, pMes, pAnio, IniciarWeb.banco);
-        }
-        catch (CedulaFormatException cedulaIncorrecta){
-            //System.out.println(espacioEnBlanco.getLocalizedMessage());
             PrintWriter out = response.getWriter();
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistroCliente</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistroCliente at " + cedulaIncorrecta.getLocalizedMessage() + "</h1>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
-            out.println("</body>");
-            out.println("</html>");
+            out.println("<!DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<title>Registro completo.</title>"
+                + "</head>"
+                + "<body>"
+                + "<h1><br/>" + controlador.registrarCliente(primerApellido, segundoApellido, nombre, identificacion, numeroTelefonico, correoElectronico, pDia, pMes, pAnio, IniciarWeb.banco) + "</h1>"
+                + "<a href=\"index.html\"><button>Volver al menú principal</button></a>"
+                + "</body>"
+                + "</html>");
+        }
+        
+        catch (BlankSpaceException espacioEnBlanco){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "RegistroCliente"));
         }
         catch (NumberFormatException entradaInvalida){
-            System.out.println("Debe ingresar un numero entero.");
-            
-            PrintWriter out = response.getWriter();
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistroCliente</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistroCliente at " + "tumba la casa mami" + "</h1>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
-            out.println("</body>");
-            out.println("</html>");
-            
+            PrintWriter out = response.getWriter();      
+            out.println(controladorValidaciones.auxiliarWeb("Debe ingresar un numero entero.", "RegistroCliente"));
         }
-
-            
-        /*try ( PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistroCliente</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistroCliente at " + request.getContextPath() + "</h1>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
-            out.println("</body>");
-            out.println("</html>");
-        }*/
+        catch (ClienteAlreadyExistsException clienteExiste){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(clienteExiste.getLocalizedMessage(), "RegistroCliente"));
+        }
+        catch (DateFormatException fechaIncorrecta){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(fechaIncorrecta.getLocalizedMessage(), "RegistroCliente"));
+        }   
+        catch (CedulaFormatException cedulaIncorrecta){
+            PrintWriter out = response.getWriter();            
+            out.println(controladorValidaciones.auxiliarWeb(cedulaIncorrecta.getLocalizedMessage(), "RegistroCliente"));
+        } 
+        catch (NumTelFormatException telIncorrecto){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(telIncorrecto.getLocalizedMessage(), "RegistroCliente"));
+        } 
+        catch (MailFormatException correoIncorrecto){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(correoIncorrecto.getLocalizedMessage(), "RegistroCliente"));
+        }
+        catch (TelefonoExistsException telefonoExiste){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(telefonoExiste.getLocalizedMessage(), "RegistroCliente"));
+        }
+        catch (CorreoExistsException correoExiste){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(correoExiste.getLocalizedMessage(), "RegistroCliente"));
+        }
     }
 }
