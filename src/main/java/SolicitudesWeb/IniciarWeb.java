@@ -38,20 +38,5 @@ public class IniciarWeb extends HttpServlet {
         controlador.fullerOperaciones(banco);
         
         response.sendRedirect("MenuPrincipal.html");
-        
-        /*Cliente cliente = banco.buscarCliente(117450718);
-        try ( PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet IniciarWeb</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet IniciarWeb at " + request.getContextPath() + "</h1>");
-            out.println("<h1>" + cliente.consultarDatosCliente() + "</h1>");
-            out.println("</body>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
-            out.println("</html>");
-        }*/
     }
 }
