@@ -12,18 +12,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <hr>
         <h3>Ingrese los datos solicitados: </h3>
         <nav>
-            <form method="GET" action="RegistroCuenta">
+            <form method="GET" action="DepositarColones">
                 <hr>
-                <label>Identificacion del cliente:</label>
-                <input type="text" name= "identificacionCliente" required>   
+                <label>Numero de cuenta:</label>
+                <input type="text" name= "numCuenta" required>   
                 <br><br>
-                <label>Saldo inicial de la cuenta:</label>
-                <input type="text" name= "saldo" required>
+                <label>Monto a depositar:</label>
+                <input type="text" name= "monto" required>
                 <br><br>
-                <label>PIN:</label>
-                <input type="text" name= "pin" required>
-                <br><br>
-                <button type="submit">Crear cuenta</button>
+                <button type="submit">Depositar</button>
                 <hr>
             </form>
             <a href="MenuPrincipal.html"><button>Volver al menu principal</button></a>
