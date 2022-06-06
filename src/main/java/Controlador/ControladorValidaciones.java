@@ -251,4 +251,18 @@ public class ControladorValidaciones {
         }
         cuentaConsultada.setTelFallido(0);
     }
+    
+    public String auxiliarWeb(String pMensaje, String pVistaWeb){
+        String mensaje = "<!DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<h1>¡No se pudo completar su solicitud!</h1>"
+                + "</head>"
+                + "<body>"
+                + "<h3><br><br/>Razón: " + pMensaje + "</h3><br><br/>"
+                + "<a href=\"" + pVistaWeb + ".html\"><button>Regresar</button></a>"
+                + "</body>"
+                + "</html>";
+        return mensaje;
+    }
 }
