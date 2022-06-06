@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Controlador.Controlador;
+import Excepciones.BlankSpaceException;
+import Excepciones.ClienteDoesNotExistException;
+import Excepciones.PinFormatException;
+import static SolicitudesWeb.RegistroCliente.controlador;
+import static SolicitudesWeb.RegistroCliente.controladorValidaciones;
 import logicadenegocios.Cliente;
 
 /**
@@ -30,28 +35,49 @@ public class RegistroCuenta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        int identificacion = Integer.parseInt(request.getParameter("identificacionCliente"));
-        double saldo = Integer.parseInt(request.getParameter("saldo"));
-        String pin = request.getParameter("pin");
+        Cliente duenioCuenta;
+        try{
+            response.setContentType("text/html;charset=UTF-8");
+            int identificacion = Integer.parseInt(request.getParameter("identificacionCliente"));
+            controladorValidaciones.clienteExiste(identificacion, IniciarWeb.banco); 
+            duenioCuenta = IniciarWeb.banco.buscarCliente(identificacion);
+                 
+            String pin = request.getParameter("pin");
+            controladorValidaciones.espacioEnBlanco(pin);
+            controladorValidaciones.formatoPin(pin);
+            
+            double saldo = Integer.parseInt(request.getParameter("saldo"));
+
+            controlador.registrarCuenta(saldo, pin, duenioCuenta, IniciarWeb.banco);
+
+            PrintWriter out = response.getWriter();
+            out.println("<!DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<title>Registro completo.</title>"
+                + "</head>"
+                + "<body>"
+                + "<h1><br/>" + controlador.registrarCuenta(saldo, pin, duenioCuenta, IniciarWeb.banco) + "</h1>"
+                + "<a href=\"index.html\"><button>Volver al menú principal</button></a>"
+                + "</body>"
+                + "</html>");
+        }
         
-        //buscar cliente registrado
-        Cliente cliente = IniciarWeb.banco.buscarCliente(identificacion);
-        
-        controlador.registrarCuenta(saldo, pin, cliente, IniciarWeb.banco);
-        
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistroCuenta</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistroCuenta at " + request.getContextPath() + "</h1>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
-            out.println("</body>");
-            out.println("</html>");
+        catch (NumberFormatException entradaInvalida){
+            PrintWriter out = response.getWriter();      
+            out.println(controladorValidaciones.auxiliarWeb("Debe ingresar un numero entero.", "RegistroCuenta"));
+        }
+        catch(ClienteDoesNotExistException clienteNoExiste){
+            PrintWriter out = response.getWriter();   
+            out.println(controladorValidaciones.auxiliarWeb(clienteNoExiste.getLocalizedMessage(), "RegistroCuenta"));
+        }
+        catch (PinFormatException formatoPin){
+            PrintWriter out = response.getWriter();   
+            out.println(controladorValidaciones.auxiliarWeb(formatoPin.getLocalizedMessage(), "RegistroCuenta"));
+        }
+        catch (BlankSpaceException espacioEnBlanco){
+            PrintWriter out = response.getWriter(); 
+            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "RegistroCuenta"));
         }
     }
 }
