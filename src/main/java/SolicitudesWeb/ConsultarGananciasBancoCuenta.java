@@ -8,6 +8,7 @@ import Controlador.Controlador;
 import Controlador.ControladorValidaciones;
 import Excepciones.BlankSpaceException;
 import Excepciones.CuentaDoesNotExistException;
+import Excepciones.CuentaInactivaException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author valef
  */
-public class ConsultarEstatusCuenta extends HttpServlet {
+public class ConsultarGananciasBancoCuenta extends HttpServlet {
     static Controlador controlador = new Controlador();
     static ControladorValidaciones controladorValidaciones = new ControladorValidaciones();
     /**
@@ -44,7 +45,9 @@ public class ConsultarEstatusCuenta extends HttpServlet {
             int numeroCuenta = Integer.parseInt(numeroCuentaTexto);
             controladorValidaciones.cuentaExiste(numeroCuenta, IniciarWeb.banco);
             
-            String estatusCuenta = controlador.consultarEstatusCuenta(numeroCuenta, IniciarWeb.banco);
+            controladorValidaciones.cuentaInactiva(numeroCuenta, IniciarWeb.banco);
+            
+            String ganaciasCuenta = controlador.consultarGananciasCuenta(numeroCuenta, IniciarWeb.banco);
             
             PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>");
@@ -53,18 +56,22 @@ public class ConsultarEstatusCuenta extends HttpServlet {
             out.println("<title>Consultar Estatus Cuenta</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>" + estatusCuenta + "</h1>");
+            out.println("<h1>" + ganaciasCuenta + "</h1>");
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
         }
         catch(BlankSpaceException espacioEnBlanco){
             PrintWriter out = response.getWriter();
-            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "ConsultarEstatusCuenta"));
+            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "ConsultarGananciasBancoCuenta"));
         }
         catch(CuentaDoesNotExistException cuentaNoExiste){
             PrintWriter out = response.getWriter();
-            out.println(controladorValidaciones.auxiliarWeb(cuentaNoExiste.getLocalizedMessage(), "ConsultarEstatusCuenta"));
+            out.println(controladorValidaciones.auxiliarWeb(cuentaNoExiste.getLocalizedMessage(), "ConsultarGananciasBancoCuenta"));
+        }
+        catch(CuentaInactivaException cuentaInactiva){
+            PrintWriter out = response.getWriter();
+            out.println(controladorValidaciones.auxiliarWeb(cuentaInactiva.getLocalizedMessage(), "ConsultarGananciasBancoCuenta"));
         }
     }
 }
