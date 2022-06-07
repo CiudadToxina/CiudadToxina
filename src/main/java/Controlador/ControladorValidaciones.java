@@ -260,7 +260,7 @@ public class ControladorValidaciones {
                 + "</head>"
                 + "<body>"
                 + "<h3><br><br/>Razón: " + pMensaje + "</h3><br><br/>"
-                + "<a href=\"" + pVistaWeb + ".html\"><button>Regresar</button></a>"
+                + "<a href=\"" + pVistaWeb + ".html\"><button>Volver</button></a>"
                 + "</body>"
                 + "</html>";
         return mensaje;
