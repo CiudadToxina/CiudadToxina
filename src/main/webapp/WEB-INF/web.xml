@@ -64,6 +64,22 @@
         <servlet-name>ConsultarSaldoDolares</servlet-name>
         <servlet-class>SolicitudesWeb.ConsultarSaldoDolares</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarGananciasTotalesBanco</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarGananciasTotalesBanco</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarEstadoCuenta</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarEstadoCuenta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarEstadoCuentaDolares</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarEstadoCuentaDolares</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarGananciasBancoCuenta</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarGananciasBancoCuenta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -127,6 +143,22 @@
     <servlet-mapping>
         <servlet-name>ConsultarSaldoDolares</servlet-name>
         <url-pattern>/ConsultarSaldoDolares</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarGananciasTotalesBanco</servlet-name>
+        <url-pattern>/ConsultarGananciasTotalesBanco</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarEstadoCuenta</servlet-name>
+        <url-pattern>/ConsultarEstadoCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarEstadoCuentaDolares</servlet-name>
+        <url-pattern>/ConsultarEstadoCuentaDolares</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarGananciasBancoCuenta</servlet-name>
+        <url-pattern>/ConsultarGananciasBancoCuenta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
