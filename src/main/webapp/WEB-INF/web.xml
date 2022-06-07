@@ -56,6 +56,14 @@
         <servlet-name>listarCuentasDescendentes</servlet-name>
         <servlet-class>SolicitudesWeb.listarCuentasDescendentes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarEstatusCuenta</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarEstatusCuenta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarSaldoDolares</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultarSaldoDolares</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -111,6 +119,14 @@
     <servlet-mapping>
         <servlet-name>listarCuentasDescendentes</servlet-name>
         <url-pattern>/listarCuentasDescendentes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarEstatusCuenta</servlet-name>
+        <url-pattern>/ConsultarEstatusCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarSaldoDolares</servlet-name>
+        <url-pattern>/ConsultarSaldoDolares</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
