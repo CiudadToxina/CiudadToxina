@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Listar clientes de manera ascendente</title>
+    </head>
+    <body>
+        <h1>Listar clientes de manera ascendente</h1>
+        <form method="POST" action="listarClientesAscendentes">
+            <button type="submit">Generar lista de clientes</button>
+        </form>
+        
+        <h1>Consultar informacion de un cliente</h1>
+        <form method="GET" action="buscarCliente">
+            <hr>
+                <label for="identificacion">Identificacion del cliente:</label>
+                <input type="text" name= "identificacionCliente" required>
+                <button type="submit">Consultar Cliente</button>
+                <br><br>
+            <hr>
+        </form>
+        <a href="MenuPrincipal.html"><button>Volver al menu principal</button></a>
+    </body>
+</html>

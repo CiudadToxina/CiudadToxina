@@ -35,7 +35,7 @@ public class CambiarPin extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int numCuenta;
         String pinActual;
@@ -60,34 +60,34 @@ public class CambiarPin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CambiarPIN</title>");            
+            out.println("<title>Servlet CambiarPin</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CambiarPIN at " + controlador.cambiarPin(pinNuevo, numCuenta, IniciarWeb.banco) + "</h1>");
+            out.println("<h1>Servlet CambiarPin at " + controlador.cambiarPin(pinNuevo, numCuenta, IniciarWeb.banco) + "</h1>");
             out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
         }
         catch (PinDoesNotMatchException pinNoCoincide){
-            out.println(controladorValidaciones.auxiliarWeb(pinNoCoincide.getLocalizedMessage(), "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb(pinNoCoincide.getLocalizedMessage(), "CambiarPin"));
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
-            out.println(controladorValidaciones.auxiliarWeb(cuentaNoExiste.getLocalizedMessage(), "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb(cuentaNoExiste.getLocalizedMessage(), "CambiarPin"));
         }
         catch (NumberFormatException entradaInvalida){
-            out.println(controladorValidaciones.auxiliarWeb("Debe ingresar un número entero.", "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb("Debe ingresar un número entero.", "CambiarPin"));
         }
         catch (CuentaInactivaException cuentaInactiva){
-            out.println(controladorValidaciones.auxiliarWeb(cuentaInactiva.getLocalizedMessage(), "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb(cuentaInactiva.getLocalizedMessage(), "CambiarPin"));
         }
         catch (PinFormatException formatoPin){
-            out.println(controladorValidaciones.auxiliarWeb(formatoPin.getLocalizedMessage(), "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb(formatoPin.getLocalizedMessage(), "CambiarPin"));
         }
         catch (BlankSpaceException espacioEnBlanco){
-            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb(espacioEnBlanco.getLocalizedMessage(), "CambiarPin"));
         }
         catch (MessagingException errorCorreo){
-            out.println(controladorValidaciones.auxiliarWeb("No se pudo enviar el correo correctamente.", "CambiarPIN"));
+            out.println(controladorValidaciones.auxiliarWeb("No se pudo enviar el correo correctamente.", "CambiarPin"));
         }
     }
 }
