@@ -80,6 +80,18 @@
         <servlet-name>ConsultarGananciasBancoCuenta</servlet-name>
         <servlet-class>SolicitudesWeb.ConsultarGananciasBancoCuenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EnviarPalabra</servlet-name>
+        <servlet-class>SolicitudesWeb.EnviarPalabra</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RetirarColones</servlet-name>
+        <servlet-class>SolicitudesWeb.RetirarColones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RetirarDolares</servlet-name>
+        <servlet-class>SolicitudesWeb.RetirarDolares</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -159,6 +171,18 @@
     <servlet-mapping>
         <servlet-name>ConsultarGananciasBancoCuenta</servlet-name>
         <url-pattern>/ConsultarGananciasBancoCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnviarPalabra</servlet-name>
+        <url-pattern>/EnviarPalabra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetirarColones</servlet-name>
+        <url-pattern>/RetirarColones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetirarDolares</servlet-name>
+        <url-pattern>/RetirarDolares</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

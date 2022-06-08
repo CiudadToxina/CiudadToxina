@@ -60,11 +60,11 @@ public class CambiarPin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CambiarPin</title>");            
+            out.println("<title>Cambiar Pin</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CambiarPin at " + controlador.cambiarPin(pinNuevo, numCuenta, IniciarWeb.banco) + "</h1>");
-            out.println("<a href=\"index.html\"><button>Volver al menú principal</button></a>");
+            out.println("<h1>" + controlador.cambiarPin(pinNuevo, numCuenta, IniciarWeb.banco) + "</h1>");
+            out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
         }

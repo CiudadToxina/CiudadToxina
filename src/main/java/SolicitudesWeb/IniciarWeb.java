@@ -21,6 +21,9 @@ import logicadenegocios.Cliente;
 public class IniciarWeb extends HttpServlet {
     static Controlador controlador = new Controlador();
     static Banco banco = new Banco();
+    static int numCuenta;
+    static String pin;
+    static String palabraEnviada;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
