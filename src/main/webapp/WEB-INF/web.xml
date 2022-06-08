@@ -92,6 +92,22 @@
         <servlet-name>RetirarDolares</servlet-name>
         <servlet-class>SolicitudesWeb.RetirarDolares</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TransferirColones</servlet-name>
+        <servlet-class>SolicitudesWeb.TransferirColones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EnviarPalabraColones</servlet-name>
+        <servlet-class>SolicitudesWeb.EnviarPalabraColones</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EnviarPalabraDolares</servlet-name>
+        <servlet-class>SolicitudesWeb.EnviarPalabraDolares</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EnviarPalabraTransferencia</servlet-name>
+        <servlet-class>SolicitudesWeb.EnviarPalabraTransferencia</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -183,6 +199,22 @@
     <servlet-mapping>
         <servlet-name>RetirarDolares</servlet-name>
         <url-pattern>/RetirarDolares</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TransferirColones</servlet-name>
+        <url-pattern>/TransferirColones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnviarPalabraColones</servlet-name>
+        <url-pattern>/EnviarPalabraColones</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnviarPalabraDolares</servlet-name>
+        <url-pattern>/EnviarPalabraDolares</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnviarPalabraTransferencia</servlet-name>
+        <url-pattern>/EnviarPalabraTransferencia</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
