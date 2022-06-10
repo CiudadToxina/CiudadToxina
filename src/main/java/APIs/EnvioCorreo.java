@@ -30,15 +30,15 @@ public class EnvioCorreo {
     
     public void generarCorreo(String correoDestinatario, String mensaje) throws AddressException, MessagingException{
         Properties propiedades = new Properties();
-        propiedades.setProperty("mail.smtp.host", "smtp.gmail.com");
+        propiedades.setProperty("mail.smtp.host", "smtp.outlook.com");
         propiedades.setProperty("mail.smtp.starttls.enable", "true");
         propiedades.setProperty("mail.smtp.port", "587");
         propiedades.setProperty("mail.smtp.auth", "true");
         
         
         Session sesion = Session.getDefaultInstance(propiedades);
-        String correo_emisor = "ciudadtoxina05@gmail.com";
-        String contraseña_emisor = "VVC69420";
+        String correo_emisor = "ciudadtoxina@outlook.com";
+        String contraseña_emisor = "Vivaca69420";
         
         String correo_receptor = correoDestinatario;
         String asunto = "Sistema Bancario Ciudad Toxina";
