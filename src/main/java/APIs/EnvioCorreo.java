@@ -13,6 +13,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import APIs.Traducir;
 
 /**
  * Clase Correo
@@ -44,9 +45,13 @@ public class EnvioCorreo {
         String asunto = "Sistema Bancario Ciudad Toxina";
         
         BodyPart texto = new MimeBodyPart();
+        Traducir traducir = new Traducir();
+        String mensajeTraducido = traducir.traducirIngles(mensaje);
+        mensaje = mensaje + 
+                "<br>__________________________________________________________________________________________<br><br>" 
+                + mensajeTraducido;
         texto.setContent(mensaje,"text/html");
-        
-        
+         
         MimeMultipart partes= new MimeMultipart();
         partes.addBodyPart(texto);
 
