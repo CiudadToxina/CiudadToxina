@@ -50,7 +50,8 @@ public class VistaGUI extends javax.swing.JFrame {
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
-             
+        CuentaBancaria cuenta = banco.buscarCuenta(325967816);
+        cuenta.setEstatus(true);
     }
 
     private void prueba(){
