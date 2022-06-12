@@ -21,6 +21,9 @@ import java.sql.SQLException;
 import logicadenegocios.Operacion;
 import logicadenegocios.OperacionAdministrativa;
 import logicadenegocios.OperacionMonetaria;
+import logicadenegocios.Registro;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -573,5 +576,9 @@ public class Controlador {
         nuevoEnvio.enviarMensaje(telefonoCliente, palabraAleatoria);   
         
         return palabraAleatoria;
+    }
+    
+    public void crearRegistro(TipoAccion accion, TipoVista vista){
+        Registro nuevoRegistro = new Registro(accion, vista);
     }
 }
