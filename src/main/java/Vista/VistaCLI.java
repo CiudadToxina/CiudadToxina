@@ -62,6 +62,7 @@ public class VistaCLI {
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
+        controlador.fullerAdministrador(banco);
                 
         do {
             mostrarMenu();

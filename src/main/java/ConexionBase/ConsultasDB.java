@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import logicadenegocios.Administrador;
 import logicadenegocios.Cliente;
 import logicadenegocios.CuentaBancaria;
 import logicadenegocios.Banco;
@@ -59,7 +60,6 @@ public class ConsultasDB {
                 + "'"+pCliente.getCorreoElectronico()+"', '"+pCliente.cambiarFechaInsercion()+"')";        
         ejecutarQuery(consulta);
     }
-    
     
     public void insertarCuentaDB(CuentaBancaria pCuenta){
         String consulta = "insert into cuentaBancaria values "
@@ -157,6 +157,13 @@ public class ConsultasDB {
         clientes = ejecutarQueryFuller(consulta);
         
         return clientes;
+    }
+    
+    public ResultSet fullerAdministradores(){
+        ResultSet administradores ;
+        String consulta = "SELECT CAST(aes_decrypt(nombreUsuario,'CiudadToxina')AS CHAR(40)) as nombreUsuario, CAST(aes_decrypt(contrasena,'CiudadToxina')AS CHAR(40)) as contrasena FROM administrador;";
+        administradores = ejecutarQueryFuller(consulta);
+        return administradores;
     }
     
     public ResultSet fullerCuentas(){

@@ -11,6 +11,7 @@ public class Banco {
     private double totalComisionesRetiros;
     public CuentaBancaria[] todasLasCuentas = new CuentaBancaria [50];
     public Cliente[] todosLosClientes = new Cliente [25];
+    public Administrador miAdmin;
    
     public Banco(){
         
@@ -87,4 +88,14 @@ public class Banco {
     public CuentaBancaria[] getTodasLasCuentas() {
         return todasLasCuentas;
     }
+
+    public Administrador getMiAdmin() {
+        return miAdmin;
+    }
+
+    public void setMiAdmin(Administrador miAdmin) {
+        this.miAdmin = miAdmin;
+    }
+    
+    
 }

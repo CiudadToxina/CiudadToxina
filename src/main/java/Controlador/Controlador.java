@@ -18,6 +18,7 @@ import utilidades.Ordenamiento;
 import ConexionBase.ConsultasDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import logicadenegocios.Administrador;
 import logicadenegocios.Operacion;
 import logicadenegocios.OperacionAdministrativa;
 import logicadenegocios.OperacionMonetaria;
@@ -449,6 +450,30 @@ public class Controlador {
         catch (SQLException e) {
         }   
     }
+    
+   
+    public void fullerAdministrador(Banco banco){
+        ResultSet resultSetAdministrador = consultasDB.fullerAdministradores();
+        
+        String usuario;
+        String contrasena;
+        
+        Administrador admin;
+        
+        try{
+            while(resultSetAdministrador.next()){
+                    usuario = resultSetAdministrador.getString("nombreUsuario");
+                    contrasena = resultSetAdministrador.getString("contrasena");
+
+                    admin = new Administrador(usuario, contrasena);
+                    banco.setMiAdmin(admin);
+            }
+        }
+        catch(SQLException e){
+            System.out.println(e.getErrorCode() + "" + e.getMessage());
+        }
+    }
+   
     
     public void fullerCuentas(Banco banco){
         ResultSet resultSetCuentas = consultasDB.fullerCuentas();
