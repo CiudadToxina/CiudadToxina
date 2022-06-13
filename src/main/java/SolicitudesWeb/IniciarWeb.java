@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Controlador.Controlador;
+import static java.lang.System.out;
 import logicadenegocios.Banco;
 import logicadenegocios.Cliente;
 
@@ -39,7 +40,7 @@ public class IniciarWeb extends HttpServlet {
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
-        
-        response.sendRedirect("MenuPrincipal.html");
+        controlador.fullerAdministrador(banco);
+        response.sendRedirect("SeleccionInicio.html");
     }
 }

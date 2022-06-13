@@ -108,6 +108,10 @@
         <servlet-name>EnviarPalabraTransferencia</servlet-name>
         <servlet-class>SolicitudesWeb.EnviarPalabraTransferencia</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InicioSesionAdmin</servlet-name>
+        <servlet-class>SolicitudesWeb.InicioSesionAdmin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -215,6 +219,10 @@
     <servlet-mapping>
         <servlet-name>EnviarPalabraTransferencia</servlet-name>
         <url-pattern>/EnviarPalabraTransferencia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InicioSesionAdmin</servlet-name>
+        <url-pattern>/InicioSesionAdmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

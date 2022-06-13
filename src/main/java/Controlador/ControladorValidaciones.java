@@ -6,6 +6,7 @@ package Controlador;
 
 import APIs.EnvioCorreo;
 import ConexionBase.ConsultasDB;
+import Excepciones.AdminDoesNotExistException;
 import Excepciones.BlankSpaceException;
 import Excepciones.CedulaFormatException;
 import Excepciones.ClienteAlreadyExistsException;
@@ -26,6 +27,7 @@ import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.mail.MessagingException;
+import logicadenegocios.Administrador;
 import logicadenegocios.Banco;
 import logicadenegocios.Cliente;
 import logicadenegocios.CuentaBancaria;
@@ -250,6 +252,16 @@ public class ControladorValidaciones {
             }
         }
         cuentaConsultada.setTelFallido(0);
+    }
+    
+    public void credencialesAdmin(String pUsuario, String pContrasena, Banco pBanco) throws AdminDoesNotExistException{
+        Administrador adminConsultado = pBanco.getMiAdmin();
+        
+        if(pUsuario.equals(adminConsultado.getNombreUsuario()) == false 
+                || pContrasena.equals(adminConsultado.getContrasena()) == false){
+            
+            throw new AdminDoesNotExistException("Las credenciales de acceso son incorrectas");
+        }
     }
     
     public String auxiliarWeb(String pMensaje, String pVistaWeb){
