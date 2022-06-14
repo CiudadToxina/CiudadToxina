@@ -30,8 +30,18 @@ import javax.mail.MessagingException;
 import logicadenegocios.Banco;
 import logicadenegocios.Cliente;
 import ConexionBase.ConexionDB;
+import SolicitudesWeb.IniciarWeb;
+import java.time.LocalDateTime;
+import logicadenegocios.Bitacora;
+import logicadenegocios.BitacoraCSV;
+import logicadenegocios.BitacoraObserver;
+import logicadenegocios.BitacoraTramaPlana;
+import logicadenegocios.BitacoraXML;
 import logicadenegocios.CuentaBancaria;
 import logicadenegocios.Operacion;
+import logicadenegocios.Registro;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -46,6 +56,10 @@ public class VistaCLI {
     static EnvioCorreo correo = new EnvioCorreo();
     static Controlador controlador = new Controlador();
     static ControladorValidaciones controladorValidaciones = new ControladorValidaciones();
+    static Bitacora bitacora = new Bitacora();
+    static BitacoraObserver bitacoraXML = new BitacoraXML(bitacora);
+    static BitacoraObserver bitacoraCSV = new BitacoraCSV(bitacora);
+    static BitacoraObserver bitacoraTramaPlana = new BitacoraTramaPlana(bitacora);
     
     /**
      * Ejecuta la aplicación
@@ -63,6 +77,7 @@ public class VistaCLI {
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
+        controlador.fullerRegistros(bitacora);
                 
         do {
             mostrarMenu();
@@ -245,6 +260,7 @@ public class VistaCLI {
             controladorValidaciones.correoRepetido(correoElectronico, banco);
             
             out.print(controlador.registrarCliente(primerApellido, segundoApellido, nombre, identificacion, numeroTelefonico, correoElectronico, dia, mes, anio, banco));
+            controlador.crearRegistro(TipoAccion.RegistrarCliente , TipoVista.CLI, bitacora);
         }
         catch (BlankSpaceException espacioEnBlanco){
             System.out.println(espacioEnBlanco.getLocalizedMessage());
@@ -296,7 +312,8 @@ public class VistaCLI {
             out.print("Ingrese el monto de deposito inicial para la cuenta: ");
             depositoInicial = Integer.parseInt(in.readLine());
             
-            out.print(controlador.registrarCuenta(depositoInicial, PIN, duenioCuenta, banco));            
+            out.print(controlador.registrarCuenta(depositoInicial, PIN, duenioCuenta, banco));  
+            controlador.crearRegistro(TipoAccion.CrearCuenta, TipoVista.CLI, bitacora);
         }
         catch (NumberFormatException entradaInvalida){
             System.out.println("Debe ingresar un numero entero.");
@@ -318,6 +335,7 @@ public class VistaCLI {
         int opcionConsulta;
         
         out.print(controlador.listarClientesAscendente(banco));
+        controlador.crearRegistro(TipoAccion.ListarClientesAscendente , TipoVista.CLI, bitacora);
         try{
             out.print("Ingrese 1 si desea consultar un cliente o cualquier tecla para volver al menu principal: ");
             opcionConsulta = Integer.parseInt(in.readLine());
@@ -325,7 +343,8 @@ public class VistaCLI {
                 out.print("Ingrese la identificacion del cliente por consultar: ");
                 identificacionCliente = Integer.parseInt(in.readLine());
                 controladorValidaciones.clienteExiste(identificacionCliente, banco);
-                out.print(controlador.consultarCliente(identificacionCliente, banco));          
+                out.print(controlador.consultarCliente(identificacionCliente, banco)); 
+                controlador.crearRegistro(TipoAccion.BuscarCliente , TipoVista.CLI, bitacora);
             }
         }
         catch (NumberFormatException entradaInvalida){
@@ -341,6 +360,7 @@ public class VistaCLI {
         int opcionConsulta;
         
         out.print(controlador.listarCuentasDescendente(banco));
+        controlador.crearRegistro(TipoAccion.ListarCuentasDescendente, TipoVista.CLI, bitacora);
         try{
             out.print("Ingrese 1 si desea consultar una cuenta o cualquier tecla para volver al menu principal: ");
             opcionConsulta = Integer.parseInt(in.readLine());
@@ -348,7 +368,8 @@ public class VistaCLI {
                 out.print("Ingrese el numero de cuenta por consultar: ");
                 numCuenta = Integer.parseInt(in.readLine());
                 controladorValidaciones.cuentaExiste(numCuenta, banco);
-                out.print(controlador.consultarCuenta(numCuenta, banco));          
+                out.print(controlador.consultarCuenta(numCuenta, banco));  
+                controlador.crearRegistro(TipoAccion.BuscarCuenta , TipoVista.CLI, bitacora);
             }         
         }
         catch (NumberFormatException entradaInvalida){
@@ -382,6 +403,7 @@ public class VistaCLI {
             controladorValidaciones.formatoPin(nuevoPin);
             
             out.println(controlador.cambiarPin(nuevoPin, numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.CambiarPin, TipoVista.CLI, bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             System.out.println(pinNoCoincide.getLocalizedMessage());
@@ -421,6 +443,7 @@ public class VistaCLI {
             montoDeposito = Integer.parseInt(in.readLine()); 
             
             out.println(controlador.depositarColones(numCuenta, montoDeposito, banco));
+            controlador.crearRegistro(TipoAccion.DepositoColones, TipoVista.CLI, bitacora);
         }
         catch (NumberFormatException entradaInvalida){
             System.out.println("Debe ingresar un número entero.");
@@ -443,6 +466,7 @@ public class VistaCLI {
             montoDeposito = Integer.parseInt(in.readLine()); 
             
             out.println(controlador.depositarDolares(numCuenta, montoDeposito, banco));
+            controlador.crearRegistro(TipoAccion.DepositoDolares, TipoVista.CLI, bitacora);
         }
         catch (NumberFormatException entradaInvalida){
             System.out.println("Debe ingresar un número entero.");
@@ -484,6 +508,7 @@ public class VistaCLI {
             controladorValidaciones.fondosInsuficientes(numCuenta, montoRetiro, banco);
             
             out.println(controlador.retirarColones(numCuenta, montoRetiro, banco));
+            controlador.crearRegistro(TipoAccion.RetiroColones, TipoVista.CLI, bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());
@@ -541,6 +566,7 @@ public class VistaCLI {
             controladorValidaciones.fondosInsuficientes(numCuenta, montoRetiro, banco);
             
             out.println(controlador.retirarDolares(numCuenta, montoRetiro, banco));
+            controlador.crearRegistro(TipoAccion.RetiroDolares, TipoVista.CLI, bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());
@@ -604,6 +630,7 @@ public class VistaCLI {
             controladorValidaciones.fondosInsuficientes(numCuentaDestino, montoDeposito, banco);
             
             out.println(controlador.realizarTransferencias(numCuentaOrigen, numCuentaDestino, montoDeposito, banco));
+            controlador.crearRegistro(TipoAccion.TransferenciaColones, TipoVista.CLI, bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             System.out.println(pinNoCoincide.getLocalizedMessage());
@@ -648,6 +675,7 @@ public class VistaCLI {
             controladorValidaciones.pinCoincide(numCuenta, pin, banco);
             
             out.println(controlador.consultarSaldoColones(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarSaldoColones, TipoVista.CLI, bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             System.out.println(pinNoCoincide.getLocalizedMessage());
@@ -686,6 +714,7 @@ public class VistaCLI {
             controladorValidaciones.pinCoincide(numCuenta, pin, banco);
             
             out.println(controlador.consultarSaldoDolares(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarSaldoDolares, TipoVista.CLI, bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());
@@ -706,10 +735,12 @@ public class VistaCLI {
     
     static void consultarCompraDivisaExtranjera(){
         System.out.println(controlador.consultarCompraDolar());
+        controlador.crearRegistro(TipoAccion.ConsultarCompraDolar, TipoVista.CLI, bitacora);
     }
     
     static void consultarVentaDivisaExtranjera(){
         System.out.println(controlador.consultarVentaDolar());
+        controlador.crearRegistro(TipoAccion.ConsultarVentaDolar, TipoVista.CLI, bitacora);
     }
     
     static void consultarEstadoCuentaLocal() throws IOException, CuentaDoesNotExistException, PinDoesNotMatchException,
@@ -729,6 +760,7 @@ public class VistaCLI {
             controladorValidaciones.cuentaInactiva(numCuenta, banco);
             
             out.println(controlador.consultarEstadoCuentaColones(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarEstadoCuentaColones, TipoVista.CLI, bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             System.out.println(pinNoCoincide.getLocalizedMessage());
@@ -767,6 +799,7 @@ public class VistaCLI {
             controladorValidaciones.cuentaInactiva(numCuenta, banco);
             
             out.println(controlador.consultarEstadoCuentaDolares(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarEstadoCuentaDolares, TipoVista.CLI, bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             System.out.println(pinNoCoincide.getLocalizedMessage());
@@ -797,6 +830,7 @@ public class VistaCLI {
             controladorValidaciones.cuentaExiste(numCuenta, banco);
             
             out.println(controlador.consultarEstatusCuenta(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarEstatusCuenta, TipoVista.CLI, bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());
@@ -808,6 +842,8 @@ public class VistaCLI {
     
     static void consultarGananciasBanco(){
         System.out.println(controlador.consultarGananciasBanco(banco));
+        controlador.crearRegistro(TipoAccion.ConsultarGananciasTotalesBanco, TipoVista.CLI, bitacora);
+        
     }
     
     static void consultarGananciasCuenta() throws IOException{
@@ -819,6 +855,7 @@ public class VistaCLI {
             controladorValidaciones.cuentaExiste(numCuenta, banco);
             
             System.out.println(controlador.consultarGananciasCuenta(numCuenta, banco));
+            controlador.crearRegistro(TipoAccion.ConsultarGananciasPorCuenta, TipoVista.CLI, bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());
@@ -844,5 +881,15 @@ public class VistaCLI {
         controlador.registrarCliente("Sanchez", "Pereira", "Daniel", 118000504, 83149643, "trabajodanielpereira@gmail.com", 25, 1, 2001, banco);
         Cliente Cliente4 = banco.buscarCliente(118000504);
         controlador.registrarCuenta(1550000, "abcA4#", Cliente4, banco);
+                
+        controlador.crearRegistro(TipoAccion.BuscarCliente, TipoVista.CLI, bitacora);   
+        controlador.crearRegistro(TipoAccion.CambiarPin, TipoVista.CLI, bitacora);
+        
+        controlador.crearRegistro(TipoAccion.CrearCuenta, TipoVista.WEB, bitacora);
+        controlador.crearRegistro(TipoAccion.ConsultarGananciasTotalesBanco, TipoVista.WEB, bitacora);
+        
+        controlador.crearRegistro(TipoAccion.ConsultarGananciasPorCuenta, TipoVista.GUI, bitacora);
+        controlador.crearRegistro(TipoAccion.ConsultarEstatusCuenta, TipoVista.GUI, bitacora);
+        
     }
 }

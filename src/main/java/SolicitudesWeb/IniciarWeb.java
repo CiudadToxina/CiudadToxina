@@ -32,10 +32,9 @@ public class IniciarWeb extends HttpServlet {
     static String pin;
     static String palabraEnviada;
     static Bitacora bitacora = new Bitacora();
-    
-    BitacoraObserver bitacoraXML = new BitacoraXML(bitacora);
-    BitacoraObserver bitacoraCSV = new BitacoraCSV(bitacora);
-    BitacoraObserver bitacoraTramaPlana = new BitacoraTramaPlana(bitacora);
+    static BitacoraObserver bitacoraXML = new BitacoraXML(bitacora);
+    static BitacoraObserver bitacoraCSV = new BitacoraCSV(bitacora);
+    static BitacoraObserver bitacoraTramaPlana = new BitacoraTramaPlana(bitacora);
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -49,20 +48,12 @@ public class IniciarWeb extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        //bitacoraCSV.generarBitacora();
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
-        
-        Registro pruebaRegistro = new Registro(TipoAccion.BuscarCliente, TipoVista.WEB);
-        pruebaRegistro.setFechaHoraBitacora(LocalDateTime.of(2015, 03, 31, 5, 40));
-        bitacora.agregarRegistro(pruebaRegistro);
-        
-        Registro registroHoy = new Registro(TipoAccion.CambiarPin, TipoVista.WEB);
-        registroHoy.setFechaHoraBitacora(LocalDateTime.now());
-        bitacora.agregarRegistro(registroHoy);
-        
+        controlador.fullerRegistros(bitacora);
+         
         response.sendRedirect("SeleccionInicio.html");
     }
 }

@@ -15,6 +15,7 @@ import logicadenegocios.Banco;
 import logicadenegocios.Operacion;
 import logicadenegocios.OperacionMonetaria;
 import logicadenegocios.OperacionAdministrativa;
+import logicadenegocios.Registro;
 import logicadenegocios.TipoOperacion;
 
 /**
@@ -97,6 +98,13 @@ public class ConsultasDB {
         ejecutarQuery(consulta);
     }
     
+    public void insertarRegistroDB(Registro pRegistro){
+        String consulta = "insert into registro values " +
+                "('"+pRegistro.getIdentificadorRegistro()+"', '"+pRegistro.getFechaHoraBitacora()+"', '"+
+                pRegistro.getTipoAccion()+"', '"+pRegistro.getTipoVista()+"')";
+        ejecutarQuery(consulta);
+    }
+    
     public void actualizarEstatusCuenta(CuentaBancaria pCuenta){
         String consulta = "UPDATE cuentaBancaria SET estatusCuenta = " + 
                 "'"+((pCuenta.getEstatus()) ? 1:0)+"' WHERE numeroCuenta = aes_encrypt('"+pCuenta.getNumeroCuenta()+"', 'CiudadToxina')";
@@ -157,6 +165,14 @@ public class ConsultasDB {
         clientes = ejecutarQueryFuller(consulta);
         
         return clientes;
+    }
+    
+    public ResultSet fullerRegistros(){
+        ResultSet registros ;
+        String consulta = "SELECT * FROM registro";
+        registros = ejecutarQueryFuller(consulta);
+        
+        return registros;
     }
     
     public ResultSet fullerAdministradores(){
