@@ -20,6 +20,8 @@ import Excepciones.DateFormatException;
 import Excepciones.MailFormatException;
 import Excepciones.NumTelFormatException;
 import Excepciones.TelefonoExistsException;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -68,6 +70,8 @@ public class RegistroCliente extends HttpServlet {
             controladorValidaciones.espacioEnBlanco(correoElectronico);
             controladorValidaciones.validarCorreo(correoElectronico);
             controladorValidaciones.correoRepetido(correoElectronico, IniciarWeb.banco);
+            
+            controlador.crearRegistro(TipoAccion.RegistrarCliente, TipoVista.WEB, IniciarWeb.bitacora);
 
             PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>"

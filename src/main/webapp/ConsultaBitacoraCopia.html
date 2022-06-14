@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Consultar bitacoras</title>
+    </head>
+    <body>
+        <h1>Consultar bitacoras</h1>
+        <hr>
+        <nav>
+            <form method="GET" action="ConsultarBitacora">
+            <select name="Registro" id="registros" required>
+                <option value="Todos">Todos los registros</option>
+                <option value="Hoy">Registros de hoy</option>
+                <option value="CLI">Registros vista CLI</option>
+                <option value="GUI">Registros vista GUI</option>
+                <option value="WEB">Registros vista WEB</option>
+            </select>  
+            <button type="submit">Consultar</button>
+            </form>
+            <br>
+            <a href="MenuPrincipalAdmin.html"><button>Volver al menu principal</button></a>
+        </nav>
+    </body>
+</html>

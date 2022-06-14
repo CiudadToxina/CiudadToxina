@@ -5,15 +5,17 @@
 package SolicitudesWeb;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Controlador.Controlador;
-import static java.lang.System.out;
 import logicadenegocios.Banco;
-import logicadenegocios.Cliente;
+import logicadenegocios.Bitacora;
+import logicadenegocios.BitacoraObserver;
+import logicadenegocios.BitacoraXML;
+import logicadenegocios.BitacoraCSV;
+import logicadenegocios.BitacoraTramaPlana;
 
 /**
  *
@@ -25,6 +27,12 @@ public class IniciarWeb extends HttpServlet {
     static int numCuenta;
     static String pin;
     static String palabraEnviada;
+    static Bitacora bitacora = new Bitacora();
+    
+    BitacoraObserver bitacoraXML = new BitacoraXML(bitacora);
+    BitacoraObserver bitacoraCSV = new BitacoraCSV(bitacora);
+    BitacoraObserver bitacoraTramaPlana = new BitacoraTramaPlana(bitacora);
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,6 +45,7 @@ public class IniciarWeb extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        //bitacoraCSV.generarBitacora();
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
