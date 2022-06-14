@@ -4,18 +4,15 @@
  */
 package logicadenegocios;
 
-/**
- *
- * @author sanch
- */
 public class BitacoraTramaPlana extends BitacoraObserver{
     
-    public BitacoraTramaPlana(Registro pRegistro){
-        registro = pRegistro;
-        registro.agregarObservador(this);
+    public BitacoraTramaPlana(Bitacora pBitacora){
+        bitacora = pBitacora;
+        bitacora.agregarObservador(this);
     }
     
     @Override
-    protected void crearBitacora(){
+    protected void actualizarBitacora(){
+        
     }
 }

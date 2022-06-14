@@ -4,18 +4,15 @@
  */
 package logicadenegocios;
 
-/**
- *
- * @author sanch
- */
 public class BitacoraCSV extends BitacoraObserver{
     
-    public BitacoraCSV(Registro pRegistro){
-        registro = pRegistro;
-        registro.agregarObservador(this);
+    public BitacoraCSV(Bitacora pBitacora){
+        bitacora = pBitacora;
+        bitacora.agregarObservador(this);
     }
     
     @Override
-    protected void crearBitacora(){
+    protected void actualizarBitacora(){
+        
     }
 }

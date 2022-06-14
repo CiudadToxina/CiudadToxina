@@ -22,24 +22,21 @@ import Excepciones.NumTelFormatException;
 import Excepciones.PalabraTelefonoIncorrectaException;
 import Excepciones.PinDoesNotMatchException;
 import Excepciones.PinFormatException;
-import static Vista.VistaCLI.banco;
-import static Vista.VistaCLI.controlador;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.MessagingException;
+import logicadenegocios.Bitacora;
 import logicadenegocios.CuentaBancaria;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
-/**
- *
- * @author sanch
- */
 public class VistaGUI extends javax.swing.JFrame {
     Controlador controlador = new Controlador();
     Banco banco = new Banco();
     ControladorValidaciones validacion = new ControladorValidaciones();
     String palabraGenerada = "";
-    
+    Bitacora bitacora = new Bitacora();
 
     /**
      * Creates new form VistaGUI
@@ -51,8 +48,6 @@ public class VistaGUI extends javax.swing.JFrame {
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
-        CuentaBancaria cuenta = banco.buscarCuenta(325967816);
-        cuenta.setEstatus(true);
     }
 
     private void prueba(){
@@ -2107,6 +2102,7 @@ public class VistaGUI extends javax.swing.JFrame {
             int telefonoCliente = Integer.parseInt(this.textoNumeroTelefono.getText());
             
             String mensajeExito = controlador.registrarCliente(primerApellidoCliente, segundoApellidoCliente, nombreCliente, identificacionCliente, telefonoCliente, correoCliente, dia, mes, anio, banco);
+            controlador.crearRegistro(TipoAccion.RegistrarCliente, TipoVista.GUI, bitacora);
             JOptionPane.showMessageDialog(null, mensajeExito);
             limpiarCamposRegistrarCliente();
             

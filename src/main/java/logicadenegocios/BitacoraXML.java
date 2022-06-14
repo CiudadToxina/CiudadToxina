@@ -4,18 +4,14 @@
  */
 package logicadenegocios;
 
-/**
- *
- * @author sanch
- */
 public class BitacoraXML extends BitacoraObserver{
     
-    public BitacoraXML(Registro pRegistro){
-        registro = pRegistro;
-        registro.agregarObservador(this);
+    public BitacoraXML(Bitacora pBitacora){
+        bitacora = pBitacora;
+        bitacora.agregarObservador(this);
     }
     
     @Override
-    protected void crearBitacora(){
+    protected void actualizarBitacora(){
     }
 }

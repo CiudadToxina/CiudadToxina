@@ -9,7 +9,7 @@ package logicadenegocios;
  * @author sanch
  */
 public abstract class BitacoraObserver {
-    protected Registro registro;
+    protected Bitacora bitacora;
     
-    protected abstract void crearBitacora();
+    protected abstract void actualizarBitacora();
 }
