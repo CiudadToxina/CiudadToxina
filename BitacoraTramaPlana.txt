@@ -1,0 +1,7 @@
+---Fecha y hora---/--------Tipo de acción-------/Tipo de vista
+2022-06-14T13:45:15BuscarClienteCLI
+2015-03-31T05:40:23CambiarPinCLI
+2022-06-14T13:45:16CrearCuentaWEB
+2022-06-14T13:45:16ConsultarGananciasTotalesBancoWEB
+2015-03-31T05:40:23ConsultarGananciasPorCuentaGUI
+2022-06-14T13:45:16ConsultarEstatusCuentaGUI
