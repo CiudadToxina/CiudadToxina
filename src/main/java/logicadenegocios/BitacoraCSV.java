@@ -18,7 +18,7 @@ public class BitacoraCSV extends BitacoraObserver{
     
     @Override
     public void generarBitacora(){
-        try (PrintWriter csvWriter = new PrintWriter("C:\\Users\\vjiuc\\Desktop\\SegundoProyectoDS\\bitacora.csv")) {
+        try (PrintWriter csvWriter = new PrintWriter("C:\\Users\\vjiuc\\Desktop\\SegundoProyectoDS\\CiudadToxina\\bitacora.csv")) {
             String dataHeaders = "FechaYHora,Accion,Vista";
             csvWriter.println(dataHeaders);
             for (Registro registro : bitacora.getRegistrosFiltrados()){
