@@ -477,6 +477,48 @@ public class Controlador {
             System.out.println(e.getErrorCode() + "" + e.getMessage());
         }
     }
+    
+    public void fullerRegistros(Bitacora bitacora){
+        ResultSet resultSetRegistros = consultasDB.fullerRegistros();
+        
+        String fecha;
+        String tipoAccion;
+        String tipoVista;
+        int dia;
+        int mes;
+        int anio;
+        int hora;
+        int minuto;
+        int segundo;
+        
+        Registro registro;
+        
+        try{
+            while(resultSetRegistros.next()){                    
+                    fecha = resultSetRegistros.getString("fechaHoraBitacora");
+                    anio = Integer.valueOf(fecha.substring(0,4));
+                    mes = Integer.valueOf(fecha.substring(5,7));
+                    dia = Integer.valueOf(fecha.substring(8,10));
+                    hora = Integer.valueOf(fecha.substring(11,13));
+                    minuto = Integer.valueOf(fecha.substring(14,16));
+                    segundo = Integer.valueOf(fecha.substring(17,19));
+                    
+                    tipoAccion = resultSetRegistros.getString("tipoAccion");
+                    TipoAccion tipoAccionEnum = TipoAccion.valueOf(tipoAccion);
+                    
+                    tipoVista = resultSetRegistros.getString("tipoVista");
+                    TipoVista tipoVistaEnum = TipoVista.valueOf(tipoVista);
+                    
+                    registro = new Registro(tipoAccionEnum, tipoVistaEnum);
+                    registro.setFechaHoraBitacora(LocalDateTime.of(anio, mes, dia, hora, minuto, segundo));
+                    
+                    bitacora.agregarRegistro(registro);
+            }
+        }
+        catch(SQLException e){
+            System.out.println(e.getErrorCode() + "" + e.getMessage());
+        }
+    }
    
     
     public void fullerCuentas(Banco banco){
@@ -610,6 +652,7 @@ public class Controlador {
     public void crearRegistro(TipoAccion accion, TipoVista vista, Bitacora pBitacora){
         Registro nuevoRegistro = new Registro(accion, vista);
         pBitacora.agregarRegistro(nuevoRegistro);
+        consultasDB.insertarRegistroDB(nuevoRegistro);
     }
     
     public void filtrarRegistros(TipoVista tipoVista, Bitacora pBitacora){
@@ -648,5 +691,27 @@ public class Controlador {
     
     public void consultarBitacora(Bitacora pBitacora){
         pBitacora.notificarTodosObservadores();
+    }
+    
+    public String obtenerHTMLBitacoraFiltradaCSV(Bitacora bitacora){
+        String htmlFinal = "FechayHora,Accion,Vista<br>";
+        
+        for (Registro registro : bitacora.getRegistrosFiltrados()){
+            htmlFinal += registro.getFechaHoraBitacora() + "," + registro.getTipoAccion() + "," + registro.getTipoVista() + "<br>";
+        } 
+        
+        String mensaje = "<!DOCTYPE html>"
+            + "<html>"
+            + "<head>"
+            + "<h1>Bitácora consultada</h1>"
+            + "</head>"
+            + "<body>"
+            + "<h3>" 
+            + htmlFinal 
+            + "</h3><br><br/>"
+            + "<a href=\"ConsultaBitacora.html\"><button>Volver</button></a>"
+            + "</body>"
+            + "</html>";
+        return mensaje;
     }
 }

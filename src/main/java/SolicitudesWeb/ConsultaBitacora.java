@@ -32,52 +32,27 @@ public class ConsultaBitacora extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        PrintWriter out = response.getWriter();
         String opcionFiltro = request.getParameter("Filtro");
         String opcionFormato = request.getParameter("Formato");
 
-        try ( PrintWriter out = response.getWriter()) {
+        if (opcionFiltro.equals("Hoy")) {
+            controlador.filtrarRegistroFecha(IniciarWeb.bitacora);
+            controlador.consultarBitacora(IniciarWeb.bitacora);
+            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
+        } 
+        
+        else if (opcionFiltro.equals("Todos")) {
+            controlador.filtrarTodos(IniciarWeb.bitacora);
+            controlador.consultarBitacora(IniciarWeb.bitacora);
+            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
+        } 
+        
+        else {
             TipoVista tipoVista = TipoVista.valueOf(opcionFiltro);
-            
-            if(opcionFiltro.equals("Hoy")){
-                
-                controlador.filtrarRegistroFecha(IniciarWeb.bitacora);
-                controlador.consultarBitacora(IniciarWeb.bitacora);
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet ConsultarBitacora</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("</body>");
-                out.println("</html>");
-            }
-            else if(opcionFiltro.equals("Todos")){
-                
-                controlador.filtrarTodos(IniciarWeb.bitacora);
-                controlador.consultarBitacora(IniciarWeb.bitacora);
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet ConsultarBitacora</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("</body>");
-                out.println("</html>");
-            }
-            else{
-                controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora);
-                controlador.consultarBitacora(IniciarWeb.bitacora);
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet ConsultarBitacora</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("</body>");
-                out.println("</html>");
-            }
-
+            controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora);
+            controlador.consultarBitacora(IniciarWeb.bitacora);
+            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
         }
     }
-
 }

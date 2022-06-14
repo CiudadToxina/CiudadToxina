@@ -7,15 +7,35 @@ package logicadenegocios;
 import java.time.LocalDateTime;
 
 public class Registro {
+    private int identificadorRegistro;
     private LocalDateTime fechaHoraBitacora;
     private TipoAccion tipoAccion;
     private TipoVista tipoVista;
+    private static int cantRegistros = 0;
     
     public Registro(TipoAccion pTipoAccion, TipoVista pTipoVista){
-        this.fechaHoraBitacora = LocalDateTime.now();
+        this.identificadorRegistro = cantRegistros + 1;
+        
+        if(cantRegistros == 1 || cantRegistros == 4){
+            this.setFechaHoraBitacora(LocalDateTime.of(2015, 03, 31, 5, 40));
+        }
+        else{
+            this.fechaHoraBitacora = LocalDateTime.now();
+        }
+        
+        
         this.tipoAccion = pTipoAccion;
         this.tipoVista = pTipoVista;
+        cantRegistros += 1;
     } 
+
+    public int getIdentificadorRegistro() {
+        return identificadorRegistro;
+    }
+
+    public void setIdentificadorRegistro(int identificadorRegistro) {
+        this.identificadorRegistro = identificadorRegistro;
+    }
 
     public LocalDateTime getFechaHoraBitacora() {
         return fechaHoraBitacora;

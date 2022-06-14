@@ -22,6 +22,8 @@ import Excepciones.NumTelFormatException;
 import Excepciones.PalabraTelefonoIncorrectaException;
 import Excepciones.PinDoesNotMatchException;
 import Excepciones.PinFormatException;
+import static Vista.VistaCLI.bitacora;
+import static Vista.VistaCLI.controlador;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,29 +45,11 @@ public class VistaGUI extends javax.swing.JFrame {
      */
     public VistaGUI() {
         initComponents();
-        //prueba();
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
-    }
-
-    private void prueba(){
-        controlador.registrarCliente("Sanchez", "Leiva", "Carlos", 305400520, 84784736, "candressanchez31@gmail.com", 31, 3, 2002, banco);
-        Cliente Cliente1 = banco.buscarCliente(305400520);
-        controlador.registrarCuenta(2000000, "abcA1#", Cliente1, banco);
-            
-        controlador.registrarCliente("Fernández", "Barquero", "Valeria", 402570359, 62967740, "valeria700602@gmail.com", 27, 9, 2002, banco);
-        Cliente Cliente2 = banco.buscarCliente(402570359);
-        controlador.registrarCuenta(1500000, "abcA2#", Cliente2, banco);
-        
-        controlador.registrarCliente("Acuña", "Coto", "Víctor", 117450718, 71051146, "victoracuna99@gmail.com", 9, 6, 1999, banco);
-        Cliente Cliente3 = banco.buscarCliente(117450718);
-        controlador.registrarCuenta(3500000, "abcA3#", Cliente3, banco);
-        
-        controlador.registrarCliente("Sanchez", "Pereira", "Daniel", 118000504, 83149643, "trabajodanielpereira@gmail.com", 25, 1, 2001, banco);
-        Cliente Cliente4 = banco.buscarCliente(118000504);
-        controlador.registrarCuenta(1550000, "abcA4#", Cliente4, banco);
+        controlador.fullerRegistros(bitacora);
     }
     
     /**
@@ -2196,6 +2180,7 @@ public class VistaGUI extends javax.swing.JFrame {
             Cliente duenioCuenta = banco.buscarCliente(identificacion);
             int depositoInicial = Integer.parseInt(this.textoSaldoInicial.getText());
             String mensajeExito = controlador.registrarCuenta(depositoInicial, this.textoPin.getText(), duenioCuenta, banco);
+            controlador.crearRegistro(TipoAccion.CrearCuenta , TipoVista.GUI, bitacora);
             
             JOptionPane.showMessageDialog(null, mensajeExito);
             
@@ -2237,6 +2222,7 @@ public class VistaGUI extends javax.swing.JFrame {
             CuentaBancaria cuentaEncontrada = banco.buscarCuenta(numeroCuenta);
             String informacionCuenta = cuentaEncontrada.consultarDatosCuenta();
             JOptionPane.showMessageDialog(null, informacionCuenta);
+            controlador.crearRegistro(TipoAccion.BuscarCuenta , TipoVista.GUI, bitacora);
             
         }
         catch(BlankSpaceException espacioEnBlanco){
@@ -2273,6 +2259,7 @@ public class VistaGUI extends javax.swing.JFrame {
             int montoDeposito = Integer.parseInt(this.textoMontoDepositar.getText());
             String infoDeposito = controlador.depositarColones(numeroCuenta, montoDeposito, banco);
             JOptionPane.showMessageDialog(null, infoDeposito);
+            controlador.crearRegistro(TipoAccion.DepositoColones , TipoVista.GUI, bitacora);
             
             this.textoMontoDepositar.setText("");
             this.textoNumeroCuentaDeposito.setText("");
@@ -2354,6 +2341,7 @@ public class VistaGUI extends javax.swing.JFrame {
             int montoDeposito = Integer.parseInt(this.textoMontoDepositarDolares.getText());
             String infoDepositoDolares = controlador.depositarDolares(numeroCuenta, montoDeposito, banco);
             JOptionPane.showMessageDialog(null, infoDepositoDolares);
+            controlador.crearRegistro(TipoAccion.DepositoDolares , TipoVista.GUI, bitacora);
             
             this.textoMontoDepositarDolares.setText("");
             this.textoNumeroCuentaDepositoDolares.setText("");
@@ -2415,6 +2403,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //CAMBIA EL PIN
             String infoCambioPin = controlador.cambiarPin(this.textoNuevoPin.getText(), numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, infoCambioPin);
+            controlador.crearRegistro(TipoAccion.CambiarPin , TipoVista.GUI, bitacora);
             
             //REINICIA LOS CAMPOS DEL FORMULARIO
             this.textoNuevoPin.setText("");
@@ -2489,6 +2478,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZA LA SOLICITUD
             String saldoColones = controlador.consultarSaldoColones(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, saldoColones);
+            controlador.crearRegistro(TipoAccion.ConsultarSaldoColones , TipoVista.GUI, bitacora);
             
             //LIMPIA LOS CAMPOS
             this.numeroCuentaConsultaColones.setText("");
@@ -2544,6 +2534,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZA LA SOLICITUD
             String saldoDolares = controlador.consultarSaldoDolares(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, saldoDolares);
+            controlador.crearRegistro(TipoAccion.ConsultarSaldoDolares , TipoVista.GUI, bitacora);
             
             //LIMPIA LOS CAMPOS
             this.numeroCuentaConsultaDolares.setText("");
@@ -2601,6 +2592,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //EJECUTA LA CONSULTA
             String estadoCuentaColones = controlador.consultarEstadoCuentaColones(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, estadoCuentaColones);
+            controlador.crearRegistro(TipoAccion.ConsultarEstadoCuentaColones , TipoVista.GUI, bitacora);
             
             //LIMPIA LOS CAMPOS
             this.numeroCuentaEstadoCuentaColones.setText("");
@@ -2667,6 +2659,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //EJECUTA LA CONSULTA
             String estadoCuentaDolares = controlador.consultarEstadoCuentaDolares(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, estadoCuentaDolares);
+            controlador.crearRegistro(TipoAccion.ConsultarEstadoCuentaDolares , TipoVista.GUI, bitacora);
             
             //LIMPIA LOS CAMPOS
             this.numeroCuentaEstadoCuentaDolares.setText("");
@@ -2722,6 +2715,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZA LA OPERACION
             String estatusCuenta = controlador.consultarEstatusCuenta(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, estatusCuenta);
+            controlador.crearRegistro(TipoAccion.ConsultarEstatusCuenta , TipoVista.GUI, bitacora);
             
             //VACIA LOS ESPACIOS
             this.numeroCuentaEstatus.setText("");
@@ -2746,6 +2740,7 @@ public class VistaGUI extends javax.swing.JFrame {
     private void botonConsultarGananciasGeneralesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConsultarGananciasGeneralesActionPerformed
         String gananciasTotalesBanco = controlador.consultarGananciasBanco(banco);
         JOptionPane.showMessageDialog(null, gananciasTotalesBanco);
+        controlador.crearRegistro(TipoAccion.ConsultarGananciasTotalesBanco , TipoVista.GUI, bitacora);
     }//GEN-LAST:event_botonConsultarGananciasGeneralesActionPerformed
 
     private void numeroCuentaGananciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroCuentaGananciaActionPerformed
@@ -2775,6 +2770,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZA LA OPERACION
             String ganaciasCuenta = controlador.consultarGananciasCuenta(numeroCuenta, banco);
             JOptionPane.showMessageDialog(null, ganaciasCuenta);
+            controlador.crearRegistro(TipoAccion.ConsultarGananciasPorCuenta , TipoVista.GUI, bitacora);
             
             //VACIA LOS ESPACIOS
             this.numeroCuentaGanancia.setText("");
@@ -2849,6 +2845,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZAR OPERACION
             String retiroColones = controlador.retirarColones(numeroCuenta, montoRetirar, banco);
             JOptionPane.showMessageDialog(null, retiroColones);
+            controlador.crearRegistro(TipoAccion.RetiroColones , TipoVista.GUI, bitacora);
             
             //LIMPIAR LOS CAMPOS
             this.textoNumeroCuentaRetiro.setText("");
@@ -2971,6 +2968,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZAR OPERACION
             String retiroDolares = controlador.retirarDolares(numeroCuenta, montoRetirar, banco);
             JOptionPane.showMessageDialog(null, retiroDolares);
+            controlador.crearRegistro(TipoAccion.RetiroDolares, TipoVista.GUI, bitacora);
             
             //LIMPIAR LOS CAMPOS
             this.textoNumeroCuentaRetiroDolar.setText("");
@@ -3135,6 +3133,7 @@ public class VistaGUI extends javax.swing.JFrame {
             //REALIZAR OPERACION
             String transferencia = controlador.realizarTransferencias(numeroCuentaSale, numeroCuentaRecibe, montoTransferir, banco);
             JOptionPane.showMessageDialog(null, transferencia);
+            controlador.crearRegistro(TipoAccion.TransferenciaColones , TipoVista.GUI, bitacora);
             
             //LIMPIAR LOS CAMPOS
             this.numeroCuentaOrigen.setText("");
