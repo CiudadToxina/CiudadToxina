@@ -10,12 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Controlador.Controlador;
+import java.time.LocalDateTime;
 import logicadenegocios.Banco;
 import logicadenegocios.Bitacora;
 import logicadenegocios.BitacoraObserver;
 import logicadenegocios.BitacoraXML;
 import logicadenegocios.BitacoraCSV;
 import logicadenegocios.BitacoraTramaPlana;
+import logicadenegocios.Registro;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -50,6 +54,15 @@ public class IniciarWeb extends HttpServlet {
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
+        
+        Registro pruebaRegistro = new Registro(TipoAccion.BuscarCliente, TipoVista.WEB);
+        pruebaRegistro.setFechaHoraBitacora(LocalDateTime.of(2015, 03, 31, 5, 40));
+        bitacora.agregarRegistro(pruebaRegistro);
+        
+        Registro registroHoy = new Registro(TipoAccion.CambiarPin, TipoVista.WEB);
+        registroHoy.setFechaHoraBitacora(LocalDateTime.now());
+        bitacora.agregarRegistro(registroHoy);
+        
         response.sendRedirect("SeleccionInicio.html");
     }
 }

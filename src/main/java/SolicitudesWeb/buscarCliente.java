@@ -14,6 +14,8 @@ import Excepciones.ClienteDoesNotExistException;
 import Excepciones.CuentaDoesNotExistException;
 import static SolicitudesWeb.RegistroCliente.controladorValidaciones;
 import static SolicitudesWeb.buscarCuenta.controladorValidaciones;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -57,6 +59,8 @@ public class buscarCliente extends HttpServlet {
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
+            
+            controlador.crearRegistro(TipoAccion.BuscarCliente, TipoVista.WEB, IniciarWeb.bitacora);
         }
         catch (NumberFormatException entradaInvalida){
             PrintWriter out = response.getWriter();            

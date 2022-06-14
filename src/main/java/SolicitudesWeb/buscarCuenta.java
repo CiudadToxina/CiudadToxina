@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import logicadenegocios.CuentaBancaria;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -55,6 +57,9 @@ public class buscarCuenta extends HttpServlet {
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
+            
+            controlador.crearRegistro(TipoAccion.BuscarCuenta, TipoVista.WEB, IniciarWeb.bitacora);
+
         } 
         catch (NumberFormatException entradaInvalida){
             PrintWriter out = response.getWriter();

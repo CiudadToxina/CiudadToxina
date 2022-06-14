@@ -1,12 +1,15 @@
 package SolicitudesWeb;
 
 import Controlador.Controlador;
+import static SolicitudesWeb.ConsultarEstadoCuenta.controlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -43,5 +46,8 @@ public class ConsultarGananciasTotalesBanco extends HttpServlet {
         out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
         out.println("</body>");
         out.println("</html>");
+                
+        controlador.crearRegistro(TipoAccion.ConsultarGananciasTotalesBanco, TipoVista.WEB, IniciarWeb.bitacora);
+
     }
 }

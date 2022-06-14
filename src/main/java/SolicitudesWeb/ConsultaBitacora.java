@@ -32,25 +32,51 @@ public class ConsultaBitacora extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String opcionFiltro = request.getParameter("Registro");
+        String opcionFiltro = request.getParameter("Filtro");
         String opcionFormato = request.getParameter("Formato");
-        TipoVista tipoVista = TipoVista.valueOf(opcionFiltro);
-        
-        controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora);
-        controlador.consultarBitacora(IniciarWeb.bitacora);
 
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ConsultarBitacora</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ConsultarBitacora at " + controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora) + "</h1>");
-            out.println("<h1> " + controlador.consultarBitacora(IniciarWeb.bitacora) + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            TipoVista tipoVista = TipoVista.valueOf(opcionFiltro);
+            
+            if(opcionFiltro.equals("Hoy")){
+                
+                controlador.filtrarRegistroFecha(IniciarWeb.bitacora);
+                controlador.consultarBitacora(IniciarWeb.bitacora);
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet ConsultarBitacora</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("</body>");
+                out.println("</html>");
+            }
+            else if(opcionFiltro.equals("Todos")){
+                
+                controlador.filtrarTodos(IniciarWeb.bitacora);
+                controlador.consultarBitacora(IniciarWeb.bitacora);
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet ConsultarBitacora</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("</body>");
+                out.println("</html>");
+            }
+            else{
+                controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora);
+                controlador.consultarBitacora(IniciarWeb.bitacora);
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet ConsultarBitacora</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("</body>");
+                out.println("</html>");
+            }
+
         }
     }
 

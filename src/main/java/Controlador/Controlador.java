@@ -18,6 +18,7 @@ import utilidades.Ordenamiento;
 import ConexionBase.ConsultasDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import logicadenegocios.Administrador;
 import logicadenegocios.Bitacora;
@@ -611,7 +612,7 @@ public class Controlador {
         pBitacora.agregarRegistro(nuevoRegistro);
     }
     
-    public String filtrarRegistros(TipoVista tipoVista, Bitacora pBitacora){
+    public void filtrarRegistros(TipoVista tipoVista, Bitacora pBitacora){
         ArrayList<Registro> registros = pBitacora.getRegistros();
         ArrayList<Registro> registrosFiltrados = new ArrayList<>();
         pBitacora.setRegistrosFiltrados(registrosFiltrados);
@@ -620,11 +621,32 @@ public class Controlador {
                 pBitacora.agregarRegistroFiltro(registro);
             }
         }
-        return "tipoVista " + tipoVista + " " + pBitacora.imprimirRegistros();
     } 
     
-    public String consultarBitacora(Bitacora pBitacora){
+    public void filtrarRegistroFecha(Bitacora pBitacora){
+        ArrayList<Registro> registros = pBitacora.getRegistros();
+        ArrayList<Registro> registrosFiltrados = new ArrayList<>();
+        pBitacora.setRegistrosFiltrados(registrosFiltrados);
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime hoy = LocalDateTime.now();
+        String esHoy = hoy.format(formatter);
+        
+        
+        for (Registro registro : registros) {
+            String fechaComparable = registro.getFechaHoraBitacora().format(formatter);
+            if (esHoy.equals(fechaComparable)) {
+                pBitacora.agregarRegistroFiltro(registro);
+            }
+        }
+    }
+    
+    public void filtrarTodos(Bitacora pBitacora){
+        ArrayList<Registro> registros = pBitacora.getRegistros();
+        pBitacora.setRegistrosFiltrados(registros);
+    }
+    
+    public void consultarBitacora(Bitacora pBitacora){
         pBitacora.notificarTodosObservadores();
-        return "hola vuhleh";
     }
 }

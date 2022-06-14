@@ -17,6 +17,8 @@ import Excepciones.PinFormatException;
 import static SolicitudesWeb.RegistroCliente.controlador;
 import static SolicitudesWeb.RegistroCliente.controladorValidaciones;
 import logicadenegocios.Cliente;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -48,8 +50,6 @@ public class RegistroCuenta extends HttpServlet {
             
             double saldo = Integer.parseInt(request.getParameter("saldo"));
 
-            controlador.registrarCuenta(saldo, pin, duenioCuenta, IniciarWeb.banco);
-
             PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>"
                 + "<html>"
@@ -61,6 +61,8 @@ public class RegistroCuenta extends HttpServlet {
                 + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
+            
+            controlador.crearRegistro(TipoAccion.CrearCuenta, TipoVista.WEB, IniciarWeb.bitacora);
         }
         
         catch (NumberFormatException entradaInvalida){
