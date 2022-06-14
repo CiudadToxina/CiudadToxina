@@ -19,6 +19,7 @@ import ConexionBase.ConsultasDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import logicadenegocios.Administrador;
+import logicadenegocios.Bitacora;
 import logicadenegocios.Operacion;
 import logicadenegocios.OperacionAdministrativa;
 import logicadenegocios.OperacionMonetaria;
@@ -603,7 +604,8 @@ public class Controlador {
         return palabraAleatoria;
     }
     
-    public void crearRegistro(TipoAccion accion, TipoVista vista){
+    public void crearRegistro(TipoAccion accion, TipoVista vista, Bitacora pBitacora){
         Registro nuevoRegistro = new Registro(accion, vista);
+        pBitacora.agregarRegistro(nuevoRegistro);
     }
 }
