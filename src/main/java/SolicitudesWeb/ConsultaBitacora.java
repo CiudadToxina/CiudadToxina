@@ -39,20 +39,16 @@ public class ConsultaBitacora extends HttpServlet {
         if (opcionFiltro.equals("Hoy")) {
             controlador.filtrarRegistroFecha(IniciarWeb.bitacora);
             controlador.consultarBitacora(IniciarWeb.bitacora);
-            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
         } 
-        
         else if (opcionFiltro.equals("Todos")) {
             controlador.filtrarTodos(IniciarWeb.bitacora);
             controlador.consultarBitacora(IniciarWeb.bitacora);
-            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
         } 
-        
         else {
             TipoVista tipoVista = TipoVista.valueOf(opcionFiltro);
             controlador.filtrarRegistros(tipoVista, IniciarWeb.bitacora);
             controlador.consultarBitacora(IniciarWeb.bitacora);
-            out.println(controlador.obtenerHTMLBitacoraFiltradaCSV(IniciarWeb.bitacora));
         }
+        out.println(controlador.obtenerHTML(opcionFormato, IniciarWeb.bitacora));
     }
 }

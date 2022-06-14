@@ -693,8 +693,20 @@ public class Controlador {
         pBitacora.notificarTodosObservadores();
     }
     
+    public String obtenerHTML(String formato, Bitacora bitacora){
+        if(formato.equals("CSV")){
+            return obtenerHTMLBitacoraFiltradaCSV(bitacora);
+        }
+        else if(formato.equals("XML")){
+            return "jeje";
+        }
+        else{
+            return "jeje";
+        }
+    }
+    
     public String obtenerHTMLBitacoraFiltradaCSV(Bitacora bitacora){
-        String htmlFinal = "FechayHora,Accion,Vista<br>";
+        String htmlFinal = "FechaYHora,Accion,Vista<br>";
         
         for (Registro registro : bitacora.getRegistrosFiltrados()){
             htmlFinal += registro.getFechaHoraBitacora() + "," + registro.getTipoAccion() + "," + registro.getTipoVista() + "<br>";
