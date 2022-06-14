@@ -71,13 +71,13 @@ public class VistaCLI {
         out = System.out;
         boolean noSalir = true;
         int opcion;
-        prueba();
-      
-        /*controlador.fullerClientes(banco);
+        //prueba();
+
+        controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
         controlador.fullerAdministrador(banco);
-        controlador.fullerRegistros(bitacora);*/
+        controlador.fullerRegistros(bitacora);
                 
         do {
             mostrarMenu();

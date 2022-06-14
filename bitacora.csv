@@ -1,3 +1,7 @@
 FechaYHora,Accion,Vista
-2022-06-14T12:47:10,CrearCuenta,WEB
-2022-06-14T12:47:10,ConsultarGananciasTotalesBanco,WEB
+2022-06-14T13:45:15,BuscarCliente,CLI
+2015-03-31T05:40:23,CambiarPin,CLI
+2022-06-14T13:45:16,CrearCuenta,WEB
+2022-06-14T13:45:16,ConsultarGananciasTotalesBanco,WEB
+2015-03-31T05:40:23,ConsultarGananciasPorCuenta,GUI
+2022-06-14T13:45:16,ConsultarEstatusCuenta,GUI

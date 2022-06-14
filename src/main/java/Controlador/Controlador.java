@@ -698,10 +698,10 @@ public class Controlador {
             return obtenerHTMLBitacoraFiltradaCSV(bitacora);
         }
         else if(formato.equals("XML")){
-            return "jeje";
+            return obtenerHTMLBitacoraFiltradaXML(bitacora);
         }
         else{
-            return "jeje";
+            return obtenerHTMLBitacoraFiltradaTramaPlana(bitacora);
         }
     }
     
@@ -710,6 +710,57 @@ public class Controlador {
         
         for (Registro registro : bitacora.getRegistrosFiltrados()){
             htmlFinal += registro.getFechaHoraBitacora() + "," + registro.getTipoAccion() + "," + registro.getTipoVista() + "<br>";
+        } 
+        
+        String mensaje = "<!DOCTYPE html>"
+            + "<html>"
+            + "<head>"
+            + "<h1>Bitácora consultada</h1>"
+            + "</head>"
+            + "<body>"
+            + "<h3>" 
+            + htmlFinal 
+            + "</h3><br><br/>"
+            + "<a href=\"ConsultaBitacora.html\"><button>Volver</button></a>"
+            + "</body>"
+            + "</html>";
+        return mensaje;
+    }
+    
+    public String obtenerHTMLBitacoraFiltradaTramaPlana(Bitacora bitacora){
+        String htmlFinal = "---Fecha y hora---/--------Tipo de acción-------/Tipo de vista<br>";
+        
+        for (Registro registro : bitacora.getRegistrosFiltrados()){
+            htmlFinal += registro.getFechaHoraBitacora().toString() + registro.getTipoAccion() + registro.getTipoVista() + "<br>";
+        } 
+        
+        String mensaje = "<!DOCTYPE html>"
+            + "<html>"
+            + "<head>"
+            + "<h1>Bitácora consultada</h1>"
+            + "</head>"
+            + "<body>"
+            + "<h3>" 
+            + htmlFinal 
+            + "</h3><br><br/>"
+            + "<a href=\"ConsultaBitacora.html\"><button>Volver</button></a>"
+            + "</body>"
+            + "</html>";
+        return mensaje;
+    }
+    
+    public String obtenerHTMLBitacoraFiltradaXML(Bitacora bitacora){
+        
+        String htmlFinal = "";
+        
+        for (Registro registro : bitacora.getRegistrosFiltrados()){
+            htmlFinal += "&#60;bitacoras&#62;" + "<br>";
+            htmlFinal += "&nbsp;&nbsp;&nbsp;&nbsp;" + "&#60;bitacora&#62;" + "<br>";
+            htmlFinal += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "&#60fechaYhora&#62;" + registro.getFechaHoraBitacora() + "&#60;/fechaYhora&#62;" + "<br>";
+            htmlFinal += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "&#60;tipoAccion&#62;" + registro.getTipoAccion()+ "&#60;/tipoAccion&#62;" + "<br>";
+            htmlFinal += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "&#60;tipoVista&#62;" + registro.getTipoVista()+ "&#60;/tipoVista&#62;" + "<br>";
+            htmlFinal += "&nbsp;&nbsp;&nbsp;&nbsp;" + "&#60;/bitacora&#62;" + "<br>";
+            htmlFinal += "&#60;/bitacoras&#62;" + "<br>";
         } 
         
         String mensaje = "<!DOCTYPE html>"
