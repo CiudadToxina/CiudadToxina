@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 
 public class listarClientesAscendentes extends HttpServlet {
@@ -23,7 +25,7 @@ public class listarClientesAscendentes extends HttpServlet {
 
         String listaClientes = controlador.listarClientesAscendente(IniciarWeb.banco);
         String clientesSeparados = listaClientes.replace("\n","<br>");
-
+                
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html>");
@@ -36,6 +38,8 @@ public class listarClientesAscendentes extends HttpServlet {
         out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
         out.println("</body>");
         out.println("</html>");
+        
+        controlador.crearRegistro(TipoAccion.ListarClientesAscendente, TipoVista.WEB, IniciarWeb.bitacora);
         
     }
 }

@@ -70,8 +70,6 @@ public class RegistroCliente extends HttpServlet {
             controladorValidaciones.espacioEnBlanco(correoElectronico);
             controladorValidaciones.validarCorreo(correoElectronico);
             controladorValidaciones.correoRepetido(correoElectronico, IniciarWeb.banco);
-            
-            controlador.crearRegistro(TipoAccion.RegistrarCliente, TipoVista.WEB, IniciarWeb.bitacora);
 
             PrintWriter out = response.getWriter();
             out.println("<!DOCTYPE html>"
@@ -84,6 +82,8 @@ public class RegistroCliente extends HttpServlet {
                 + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
+            
+            controlador.crearRegistro(TipoAccion.RegistrarCliente, TipoVista.WEB, IniciarWeb.bitacora);
         }
         
         catch (BlankSpaceException espacioEnBlanco){

@@ -10,6 +10,7 @@ import Excepciones.BlankSpaceException;
 import Excepciones.CuentaDoesNotExistException;
 import Excepciones.CuentaInactivaException;
 import Excepciones.PinDoesNotMatchException;
+import static SolicitudesWeb.ConsultarEstadoCuenta.controlador;
 import static SolicitudesWeb.RegistroCliente.controlador;
 import static SolicitudesWeb.RegistroCliente.controladorValidaciones;
 import java.io.IOException;
@@ -19,6 +20,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -62,6 +65,8 @@ public class ConsultarSaldoColones extends HttpServlet {
                 + "<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>"
                 + "</body>"
                 + "</html>");
+            
+            controlador.crearRegistro(TipoAccion.ConsultarSaldoColones, TipoVista.WEB, IniciarWeb.bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             PrintWriter out = response.getWriter(); 

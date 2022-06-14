@@ -19,6 +19,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -53,7 +55,7 @@ public class RetirarColones extends HttpServlet {
             
             montoRetiro = Integer.parseInt(request.getParameter("cantRetirar"));
             controladorValidaciones.fondosInsuficientes(IniciarWeb.numCuenta, montoRetiro, IniciarWeb.banco);
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -64,6 +66,8 @@ public class RetirarColones extends HttpServlet {
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
+            
+            controlador.crearRegistro(TipoAccion.RetiroColones, TipoVista.WEB, IniciarWeb.bitacora);
             
         }
         catch (NumberFormatException entradaInvalida){

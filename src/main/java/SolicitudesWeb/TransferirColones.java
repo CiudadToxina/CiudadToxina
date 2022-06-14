@@ -20,6 +20,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -60,7 +62,7 @@ public class TransferirColones extends HttpServlet {
 
             montoDeposito = Integer.parseInt(request.getParameter("cantTransferir"));
             controladorValidaciones.fondosInsuficientes(IniciarWeb.numCuenta, montoDeposito, IniciarWeb.banco);
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -70,7 +72,9 @@ public class TransferirColones extends HttpServlet {
             out.println("<h1>" + controlador.realizarTransferencias(IniciarWeb.numCuenta, numCuentaDestino, montoDeposito, IniciarWeb.banco) + "</h1>");
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
-            out.println("</html>"); 
+            out.println("</html>");
+            
+            controlador.crearRegistro(TipoAccion.TransferenciaColones, TipoVista.WEB, IniciarWeb.bitacora);
         }
         catch (CuentaDoesNotExistException cuentaNoExiste){
             System.out.println(cuentaNoExiste.getLocalizedMessage());

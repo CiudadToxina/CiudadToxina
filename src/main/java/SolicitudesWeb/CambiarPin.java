@@ -18,6 +18,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -56,7 +58,7 @@ public class CambiarPin extends HttpServlet {
             pinNuevo = request.getParameter("pinNuevo");
             controladorValidaciones.espacioEnBlanco(pinNuevo);
             controladorValidaciones.formatoPin(pinNuevo);
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -67,6 +69,8 @@ public class CambiarPin extends HttpServlet {
             out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
             out.println("</body>");
             out.println("</html>");
+            
+            controlador.crearRegistro(TipoAccion.CambiarPin, TipoVista.WEB, IniciarWeb.bitacora);
         }
         catch (PinDoesNotMatchException pinNoCoincide){
             out.println(controladorValidaciones.auxiliarWeb(pinNoCoincide.getLocalizedMessage(), "CambiarPin"));

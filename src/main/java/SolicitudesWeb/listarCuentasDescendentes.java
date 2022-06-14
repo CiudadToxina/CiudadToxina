@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import logicadenegocios.TipoAccion;
+import logicadenegocios.TipoVista;
 
 /**
  *
@@ -34,7 +36,7 @@ public class listarCuentasDescendentes extends HttpServlet {
         
         String listaCuentas = controlador.listarCuentasDescendente(IniciarWeb.banco);
         String cuentasSeparadas = listaCuentas.replace("\n","<br>");
-        
+       
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();  
         out.println("<!DOCTYPE html>");
@@ -48,6 +50,8 @@ public class listarCuentasDescendentes extends HttpServlet {
         out.println("<a href=\"MenuPrincipal.html\"><button>Volver al menú principal</button></a>");
         out.println("</body>");
         out.println("</html>");
+        
+        controlador.crearRegistro(TipoAccion.ListarCuentasDescendente, TipoVista.WEB, IniciarWeb.bitacora);
         
     }
 }
