@@ -18,8 +18,10 @@ import utilidades.Ordenamiento;
 import ConexionBase.ConsultasDB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import logicadenegocios.Administrador;
 import logicadenegocios.Bitacora;
+import logicadenegocios.BitacoraObserver;
 import logicadenegocios.Operacion;
 import logicadenegocios.OperacionAdministrativa;
 import logicadenegocios.OperacionMonetaria;
@@ -607,5 +609,22 @@ public class Controlador {
     public void crearRegistro(TipoAccion accion, TipoVista vista, Bitacora pBitacora){
         Registro nuevoRegistro = new Registro(accion, vista);
         pBitacora.agregarRegistro(nuevoRegistro);
+    }
+    
+    public String filtrarRegistros(TipoVista tipoVista, Bitacora pBitacora){
+        ArrayList<Registro> registros = pBitacora.getRegistros();
+        ArrayList<Registro> registrosFiltrados = new ArrayList<>();
+        pBitacora.setRegistrosFiltrados(registrosFiltrados);
+        for (Registro registro : registros){
+            if (registro.getTipoVista().equals(tipoVista)){
+                pBitacora.agregarRegistroFiltro(registro);
+            }
+        }
+        return "tipoVista " + tipoVista + " " + pBitacora.imprimirRegistros();
+    } 
+    
+    public String consultarBitacora(Bitacora pBitacora){
+        pBitacora.notificarTodosObservadores();
+        return "hola vuhleh";
     }
 }

@@ -12,6 +12,7 @@ public class BitacoraXML extends BitacoraObserver{
     }
     
     @Override
-    protected void actualizarBitacora(){
+    public void generarBitacora(){
+        System.out.println("bitacora xml");
     }
 }

@@ -112,6 +112,10 @@
         <servlet-name>InicioSesionAdmin</servlet-name>
         <servlet-class>SolicitudesWeb.InicioSesionAdmin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConsultarBitacora</servlet-name>
+        <servlet-class>SolicitudesWeb.ConsultaBitacora</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistroCliente</servlet-name>
         <url-pattern>/RegistroCliente</url-pattern>
@@ -223,6 +227,10 @@
     <servlet-mapping>
         <servlet-name>InicioSesionAdmin</servlet-name>
         <url-pattern>/InicioSesionAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarBitacora</servlet-name>
+        <url-pattern>/ConsultarBitacora</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

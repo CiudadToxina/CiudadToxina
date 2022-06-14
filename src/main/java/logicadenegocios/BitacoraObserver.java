@@ -11,5 +11,5 @@ package logicadenegocios;
 public abstract class BitacoraObserver {
     protected Bitacora bitacora;
     
-    protected abstract void actualizarBitacora();
+    public abstract void generarBitacora();
 }

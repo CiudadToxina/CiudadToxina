@@ -16,4 +16,30 @@ public class Registro {
         this.tipoAccion = pTipoAccion;
         this.tipoVista = pTipoVista;
     } 
+
+    public LocalDateTime getFechaHoraBitacora() {
+        return fechaHoraBitacora;
+    }
+
+    public void setFechaHoraBitacora(LocalDateTime fechaHoraBitacora) {
+        this.fechaHoraBitacora = fechaHoraBitacora;
+    }
+
+    public TipoAccion getTipoAccion() {
+        return tipoAccion;
+    }
+
+    public void setTipoAccion(TipoAccion tipoAccion) {
+        this.tipoAccion = tipoAccion;
+    }
+
+    public TipoVista getTipoVista() {
+        return tipoVista;
+    }
+
+    public void setTipoVista(TipoVista tipoVista) {
+        this.tipoVista = tipoVista;
+    }
+    
+    
 }

@@ -12,7 +12,7 @@ public class BitacoraTramaPlana extends BitacoraObserver{
     }
     
     @Override
-    protected void actualizarBitacora(){
-        
+    public void generarBitacora(){
+        System.out.println("bitacora trama plana");
     }
 }
