@@ -73,11 +73,7 @@ public class BitacoraXML extends BitacoraObserver {
             transformer.transform(source, result);
 
             System.out.println("bitacora xml");
-        } catch (ParserConfigurationException ex) {
-            Logger.getLogger(BitacoraXML.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (TransformerConfigurationException ex) {
-            Logger.getLogger(BitacoraXML.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (TransformerException ex) {
+        } catch (ParserConfigurationException | TransformerException ex) {
             Logger.getLogger(BitacoraXML.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
