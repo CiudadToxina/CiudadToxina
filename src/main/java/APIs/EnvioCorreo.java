@@ -19,23 +19,17 @@ import APIs.Traducir;
  * Clase Correo
  * @author valef
  */
-public class EnvioCorreo {
+public class EnvioCorreo implements EnvioMensaje{
     
-    /**
-     * Metodo que permite generar un correo 
-     * @param correoDestinatario Correo destinatario del reporte
-     * @throws AddressException si la dirección de correo electrónico no existe
-     * @throws MessagingException 
-     */
-    
-    
-    public void generarCorreo(String correoDestinatario, String mensaje) throws AddressException, MessagingException{
+    @Override
+    public void enviarMensaje(String correoDestinatario, String mensaje){
         Properties propiedades = new Properties();
         propiedades.setProperty("mail.smtp.host", "smtp.outlook.com");
+        //propiedades.setProperty("mail.smtp.host", "smtp.office365.com");
+        //propiedades.setProperty("mail.smtp.user", "ciudadtoxina@outlook.com");
+        propiedades.setProperty("mail.smtp.auth", "true");
         propiedades.setProperty("mail.smtp.starttls.enable", "true");
         propiedades.setProperty("mail.smtp.port", "587");
-        propiedades.setProperty("mail.smtp.auth", "true");
-        
         
         Session sesion = Session.getDefaultInstance(propiedades);
         String correo_emisor = "ciudadtoxina@outlook.com";
@@ -50,23 +44,27 @@ public class EnvioCorreo {
         mensaje = mensaje + 
                 "<br>__________________________________________________________________________________________<br><br>" 
                 + mensajeTraducido;
-        texto.setContent(mensaje,"text/html");
-         
-        MimeMultipart partes= new MimeMultipart();
-        partes.addBodyPart(texto);
+        try{
+            texto.setContent(mensaje,"text/html");
 
-        //Ahora esto es la construccion 
-        MimeMessage message = new MimeMessage(sesion);
-        message.setFrom(new InternetAddress(correo_emisor));
-        message.addRecipient(Message.RecipientType.TO, new InternetAddress(correo_receptor));
-        message.setSubject(asunto);
-        //message.setText(mensaje);
-        message.setContent(partes);
-         
-        //Esto es lo que hace el transporte
-        Transport transporte = sesion.getTransport("smtp");
-        transporte.connect(correo_emisor,contraseña_emisor);
-        transporte.sendMessage(message , message.getRecipients(Message.RecipientType.TO));
-        transporte.close();   
+            MimeMultipart partes= new MimeMultipart();
+            partes.addBodyPart(texto);
+
+            //Ahora esto es la construccion 
+            MimeMessage message = new MimeMessage(sesion);
+            message.setFrom(new InternetAddress(correo_emisor));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(correo_receptor));
+            message.setSubject(asunto);
+            //message.setText(mensaje);
+            message.setContent(partes);
+
+            //Esto es lo que hace el transporte
+            Transport transporte = sesion.getTransport("smtp");
+            transporte.connect(correo_emisor,contraseña_emisor);
+            transporte.sendMessage(message , message.getRecipients(Message.RecipientType.TO));
+            transporte.close();             
+        }catch(MessagingException me){
+             me.printStackTrace();
+        }  
     }  
 }

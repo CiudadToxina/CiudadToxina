@@ -72,7 +72,7 @@ public class VistaCLI {
         boolean noSalir = true;
         int opcion;
         //prueba();
-
+        
         controlador.fullerClientes(banco);
         controlador.fullerCuentas(banco);
         controlador.fullerOperaciones(banco);
