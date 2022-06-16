@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.util.Base64;
 
@@ -18,9 +19,10 @@ import java.util.Base64;
  *
  * @author sanch
  */
-public class EnvioSMS {
-    
-    public void enviarMensaje(String numeroTelefono, String mensaje) throws MalformedURLException, IOException{
+public class EnvioSMS implements EnvioMensaje{
+
+    @Override
+    public void enviarMensaje(String numeroTelefono, String mensaje) {
         String myURI = "https://api.bulksms.com/v1/messages";
         
         String myUsername = "vjiucl";
@@ -29,35 +31,43 @@ public class EnvioSMS {
 
         String myData = "{to: \""+codPais+""+numeroTelefono+"\", encoding: \"UNICODE\", body: \""+mensaje+"\"}";
 
-        URL url = new URL(myURI);
-        HttpURLConnection request = (HttpURLConnection) url.openConnection();
-        request.setDoOutput(true);
+        try{
+            URL url = new URL(myURI);
+            HttpURLConnection request = (HttpURLConnection) url.openConnection();
+            request.setDoOutput(true);
 
-        String authStr = myUsername + ":" + myPassword;
-        String authEncoded = Base64.getEncoder().encodeToString(authStr.getBytes());
-        request.setRequestProperty("Authorization", "Basic " + authEncoded);
+            String authStr = myUsername + ":" + myPassword;
+            String authEncoded = Base64.getEncoder().encodeToString(authStr.getBytes());
+            request.setRequestProperty("Authorization", "Basic " + authEncoded);
 
-        request.setRequestMethod("POST");
-        request.setRequestProperty( "Content-Type", "application/json");
+            request.setRequestMethod("POST");
+            request.setRequestProperty( "Content-Type", "application/json");
 
-        OutputStreamWriter out = new OutputStreamWriter(request.getOutputStream());
-        out.write(myData);
-        out.close();
+            OutputStreamWriter out = new OutputStreamWriter(request.getOutputStream());
+            out.write(myData);
+            out.close();
 
-        try {
-          InputStream response = request.getInputStream();
-          BufferedReader in = new BufferedReader(new InputStreamReader(response));
-          String replyText;
-          while ((replyText = in.readLine()) != null) {
-          }
-          in.close();
-        } catch (IOException ex) {
-          BufferedReader in = new BufferedReader(new InputStreamReader(request.getErrorStream()));
+            try {
+                InputStream response = request.getInputStream();
+                BufferedReader in = new BufferedReader(new InputStreamReader(response));
+                String replyText;
+                while ((replyText = in.readLine()) != null) {
+                }
+                in.close();
+            } catch (IOException ex) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(request.getErrorStream()));
 
-          String replyText;
-          while ((replyText = in.readLine()) != null) {
-          }
-          in.close();
+                String replyText;
+                while ((replyText = in.readLine()) != null) {
+                }
+                in.close();
+            }            
+        }catch(MalformedURLException e){
+            
+        }catch(ProtocolException pe){
+            
+        }catch(IOException exx){
+            
         }
     }
 }

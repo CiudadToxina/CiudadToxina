@@ -58,7 +58,7 @@ public class ControladorValidaciones {
                 EnvioCorreo correo = new EnvioCorreo();
                 String mensaje = "El sistema bancario de Ciudad Toxina le informa que su cuenta " +pNumCuenta+ " ha sido bloqueada por escribir el PIN"
                 + " incorrectamente 2 veces.";
-                correo.generarCorreo(correoCliente, mensaje);
+                correo.enviarMensaje(correoCliente, mensaje);
                 
                 throw new PinDoesNotMatchException("El PIN ingresado no coincide con el PIN de la cuenta y se bloqueo su cuenta.");
             }
@@ -242,7 +242,7 @@ public class ControladorValidaciones {
                 EnvioCorreo correo = new EnvioCorreo();
                 String mensaje = "El sistema bancario de Ciudad Toxina le informa que su cuenta ha sido bloqueada por escribir la palabra"
                 + " de confirmación incorrectamente 2 veces.";
-                correo.generarCorreo(correoCliente, mensaje);
+                correo.enviarMensaje(correoCliente, mensaje);
                 
                 throw new PalabraTelefonoIncorrectaException("La palabra ingresada no coincide con la enviada por telefono "
                         + "y se bloqueo su cuenta.");

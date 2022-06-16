@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import utilidades.ObtenerTipoCambio;
 import utilidades.Comparable;
+import utilidades.SimpleOperacionFactory;
+import logicadepresentacion.TiendaOperaciones;
 
 /**
  *
@@ -31,6 +33,9 @@ public class CuentaBancaria implements Comparable{
     private static ArrayList<Integer> numerosCuenta = new ArrayList<>();
     public OperacionMonetaria[] misOperacionesMonetarias = new OperacionMonetaria[50];
     public OperacionAdministrativa[] misOperacionesAdministrativas = new OperacionAdministrativa[50];
+    
+    private static SimpleOperacionFactory operacionFactory = new SimpleOperacionFactory();
+    private static TiendaOperaciones tiendaOperaciones = new TiendaOperaciones(operacionFactory);
 
     //Constructor
     public CuentaBancaria(double pSaldo, String pPin) {
@@ -172,9 +177,7 @@ public class CuentaBancaria implements Comparable{
     public OperacionMonetaria[] getMisOperacionesMonetarias() {
         return misOperacionesMonetarias;
     }
-    
-    
-    
+
     //Métodos de clase
     private boolean numCuentaExiste(int numCuenta){
         boolean resultado = false;
@@ -256,6 +259,7 @@ public class CuentaBancaria implements Comparable{
     
     public void registrarOperacionMonetaria(boolean pCargoConceptoComision, double pMontoOperacion, TipoOperacion pTipoOperacion){
         OperacionMonetaria nuevaOperacion = new OperacionMonetaria(pCargoConceptoComision, pMontoOperacion, pTipoOperacion);
+        //Operacion nuevaOperacion = tiendaOperaciones.crearOperacion("OperacionMonetaria");
         this.misOperacionesMonetarias[cantOperacionesMonetarias] = nuevaOperacion;
         this.cantOperacionesMonetarias++;
     }
