@@ -27,7 +27,7 @@ public class BitacoraCSV extends BitacoraObserver{
             }   
         }
         catch (IOException ex) {
-            System.out.println("chale vuhleh");
+            System.out.println("Bitacora no generada");
         }            
     }       
 }

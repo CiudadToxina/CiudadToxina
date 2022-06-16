@@ -16,12 +16,15 @@ public class Registro {
     public Registro(TipoAccion pTipoAccion, TipoVista pTipoVista){
         this.identificadorRegistro = cantRegistros + 1;
         
+        /*
         if(cantRegistros == 1 || cantRegistros == 4){
             this.setFechaHoraBitacora(LocalDateTime.of(2015, 03, 31, 5, 40, 23));
         }
         else{
             this.fechaHoraBitacora = LocalDateTime.now();
-        }
+        }*/
+        
+        this.fechaHoraBitacora = LocalDateTime.now();
         
         
         this.tipoAccion = pTipoAccion;
